@@ -1,4 +1,4 @@
-# synergie
+# Synergie
 
 ##Installation
 The website is based on the Laravel Framework (http://laravel.com/docs/5.1).
