@@ -1,2 +1,11 @@
+/bootstrap/compiled.php
+composer.phar
+npm-debug.log
 .env
-/vendor
+.DS_Store
+.idea
+Thumbs.db
+node_modules
+vendor/*
+public/vendor/* 
+workbench/*
