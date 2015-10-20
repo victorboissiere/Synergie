@@ -10,12 +10,14 @@ On windows, a directory wamp will be created at the root of your hard drive.
 All the website files should be placed in wamp/www. Run wamp and the website should be available at http://localhost/public
 in your web browser.
 
+###Install composer
+You have to install composer (https://getcomposer.org/download/) and run the command below in the root directory.
+```
+composer install
+```
+
 ###Env file
-Create a file .env at the root of the website files and copy/paste the text below with your own values:
-```
-APP_KEY=your_app_key
-APP_DEBUG=true
-```
+Rename the .env.example file in the root directory in .env and fill in the correct values of your configuration.
 
 ###Permissions
 If you see a blank page it means that Laravel cannot access the storage directory.
@@ -27,9 +29,6 @@ sudo chmod -R 777 storage/
 
 ###Setting the database
 No database required at the moment
-
-###Installing composer (optional)
-If you need to install your own dependencies you can use composer.
 
 ##Available commands
 All the commands available can be found using : php artisan
