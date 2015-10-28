@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'WelcomeController@index');
+Route::get('/blog', 'WelcomeController@blog');
+Route::get('/admin', 'AdminController@login');

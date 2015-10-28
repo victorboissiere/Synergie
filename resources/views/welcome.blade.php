@@ -1,390 +1,205 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-    <meta name="theme-color" content="#2196F3">
-    <title>Synergie</title>
-
-    <!-- CSS  -->
-    <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
-    <link href="min/custom-min.css" type="text/css" rel="stylesheet" >
-</head>
-<body id="top" class="scrollspy">
-
-<!-- Pre Loader -->
-<div id="loader-wrapper">
-    <div id="loader"></div>
- 
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
- 
-</div>
-
-<!--Navigation-->
- <div class="navbar-fixed">
-    <nav id="nav_f" class="default_color" role="navigation">
-        <div class="container">
-            <div class="nav-wrapper">
-            <a href="#" id="logo-container" class="brand-logo">Synergie</a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="#intro">Service</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="https://github.com/joashp/material-design-template" target="_blank">Download</a></li>
-                </ul>
-                <ul id="nav-mobile" class="side-nav">
-                    <li><a href="#intro">Service</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="https://github.com/joashp/material-design-template" target="_blank">Download</a></li>
-                </ul>
-            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-            </div>
-        </div>
-    </nav>
-</div>
-
-<!--Hero-->
-<div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-        <h1 class="text_h center header cd-headline letters type">
-            <!--<span>For</span>!--> 
-            <span class="cd-words-wrapper waiting">
-                <b class="is-visible">For equality</b>
-                <b>For integrity</b>
-                <b>For synergie</b>
-            </span>
-        </h1>
-    </div>
-</div>
-
-<!--Intro and service-->
-<div id="intro" class="section scrollspy">
-    <div class="container">
-        <div class="row">
-            <div  class="col s12">
-                <h2 class="center header text_h2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="span_h2"> Phasellus  </span>vestibulum lorem risus, nec suscipit lorem <span class="span_h2"> laoreet quis.</span> </h2>
-            </div>
-
-            <div  class="col s12 m4 l4">
-                <div class="center promo promo-example">
-                    <i class="mdi-image-flash-on"></i>
-                    <h5 class="promo-caption">Speeds up development</h5>
-                    <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
-                </div>
-            </div>
-            <div class="col s12 m4 l4">
-                <div class="center promo promo-example">
-                    <i class="mdi-social-group"></i>
-                    <h5 class="promo-caption">User Experience Focused</h5>
-                    <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                </div>
-            </div>
-            <div class="col s12 m4 l4">
-                <div class="center promo promo-example">
-                    <i class="mdi-hardware-desktop-windows"></i>
-                    <h5 class="promo-caption">Fully responsive</h5>
-                    <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--Work-->
-<div class="section scrollspy" id="work">
-    <div class="container">
-        <h2 class="header text_b">Work </h2>
-        <div class="row">
-            <div class="col s12 m4 l4">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="img/project1.jpg">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
-                        <p><a href="#">Project link</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
-                        <p>Here is some more information about this project that is only revealed once clicked on.</p>
+@extends('layouts.header')
+@section('page')
+<div class="wrapper cyan-text text-darken-3">
+    <div>
+        <div id="skrollr-body">
+            <div id="non-skrollr">
+                <div class="container-fluid">
+                    <div class="mast">
+                        <h1>For Synergie</h1>
+                        <h4>Site en cours<br></h4>
+                        <h6>based on google&trade;'s <b>material design</b>
+                        specifications</h6>
+                        <h4><b>work-in-progress</b></h4><a class=
+                        "cyan darken-2 white-text text-darken-3 waves-effect waves-light btn"
+                        href="http://github.com/naveenshaji/material" target=
+                        "_blank"><i class="mdi-action-get-app"></i> View on
+                        github</a><br>
+                        <i class="mdi-navigation-arrow-drop-down" style=
+                        "font-size: 200px;"></i>
                     </div>
                 </div>
-            </div>
-            <div class="col s12 m4 l4">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="img/project2.jpeg">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
-                        <p><a href="#">Project link</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
-                        <p>Here is some more information about this project that is only revealed once clicked on.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m4 l4">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="img/project3.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
-                        <p><a href="#">Project link</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
-                        <p>Here is some more information about this project that is only revealed once clicked on.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m4 l4">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="img/project4.jpg">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
-                        <p><a href="#">Project link</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
-                        <p>Here is some more information about this project that is only revealed once clicked on.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m4 l4">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="img/project5.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
-                        <p><a href="#">Project link</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
-                        <p>Here is some more information about this project that is only revealed once clicked on.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m4 l4">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="img/project6.jpeg">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
-                        <p><a href="#">Project link</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
-                        <p>Here is some more information about this project that is only revealed once clicked on.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--Parallax-->
-<div class="parallax-container">
-    <div class="parallax"><img src="img/parallax1.png"></div>
-</div>
-
-<!--Team-->
-<div class="section scrollspy" id="team">
-    <div class="container">
-        <h2 class="header text_b"> Our Team </h2>
-        <div class="row">
-            <div class="col s12 m3">
-                <div class="card card-avatar">
-                    <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="img/avatar1.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Flash <br/>
-                            <small><em><a class="red-text text-darken-1" href="#">CEO</a></em></small></span>
-                        <p>
-                            <a class="blue-text text-lighten-2" href="https://www.facebook.com/joash.c.pereira">
-                                <i class="fa fa-facebook-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://twitter.com/im_joash">
-                                <i class="fa fa-twitter-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://plus.google.com/u/0/+JoashPereira">
-                                <i class="fa fa-google-plus-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/joashp">
-                                <i class="fa fa-linkedin-square"></i>
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m3">
-                <div class="card card-avatar">
-                    <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="img/avatar2.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Cat Woman<br/>
-                            <small><em><a class="red-text text-darken-1" href="#">Designer</a></em></small>
-                        </span>
-                        <p>
-                            <a class="blue-text text-lighten-2" href="https://www.facebook.com/joash.c.pereira">
-                                <i class="fa fa-facebook-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://twitter.com/im_joash">
-                                <i class="fa fa-twitter-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://plus.google.com/u/0/+JoashPereira">
-                                <i class="fa fa-google-plus-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/joashp">
-                                <i class="fa fa-linkedin-square"></i>
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m3">
-                <div class="card card-avatar">
-                    <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="img/avatar3.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">
-                            Capt. America <br/>
-                            <small><em><a class="red-text text-darken-1" href="#">CMO</a></em></small></span>
-                        <p>
-                            <a class="blue-text text-lighten-2" href="https://www.facebook.com/joash.c.pereira">
-                                <i class="fa fa-facebook-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://twitter.com/im_joash">
-                                <i class="fa fa-twitter-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://plus.google.com/u/0/+JoashPereira">
-                                <i class="fa fa-google-plus-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/joashp">
-                                <i class="fa fa-linkedin-square"></i>
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m3">
-                <div class="card card-avatar">
-                    <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="img/avatar4.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Robin<br/>
-                            <small><em><a class="red-text text-darken-1" href="#">Developer</a></em></small></span>
-                        <p>
-                            <a class="blue-text text-lighten-2" href="https://www.facebook.com/joash.c.pereira">
-                                <i class="fa fa-facebook-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://twitter.com/im_joash">
-                                <i class="fa fa-twitter-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://plus.google.com/u/0/+JoashPereira">
-                                <i class="fa fa-google-plus-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/joashp">
-                                <i class="fa fa-linkedin-square"></i>
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--Footer-->
-<footer id="contact" class="page-footer default_color scrollspy">
-    <div class="container">  
-        <div class="row">
-            <div class="col l6 s12">
-                <form class="col s12" action="contact.php" method="post">
-                    <div class="row">
-                        <div class="input-field col s6">
-                            <i class="mdi-action-account-circle prefix white-text"></i>
-                            <input id="icon_prefix" name="name" type="text" class="validate white-text">
-                            <label for="icon_prefix" class="white-text">First Name</label>
-                        </div>
-                        <div class="input-field col s6">
-                            <i class="mdi-communication-email prefix white-text"></i>
-                            <input id="icon_email" name="email" type="email" class="validate white-text">
-                            <label for="icon_email" class="white-text">Email-id</label>
-                        </div>
-                        <div class="input-field col s12">
-                            <i class="mdi-editor-mode-edit prefix white-text"></i>
-                            <textarea id="icon_prefix2" name="message" class="materialize-textarea white-text"></textarea>
-                            <label for="icon_prefix2" class="white-text">Message</label>
-                        </div>
-                        <div class="col offset-s7 s5">
-                            <button class="btn waves-effect waves-light red darken-1" type="submit">Submit
-                                <i class="mdi-content-send right white-text"></i>
-                            </button>
+                <div class=
+                "container-fluid card cyan z-depth-2 waves-effect waves-light">
+                    <div class="cover z-depth-1" style=
+                    "background-image: url('img/1.jpg');">
+                        <div class="filter cyan" style="opacity: 0.7;">
+                            <div class="cover-text cyan-text text-darken-4">
+                                <span style="font-size: 50px;">&lt;
+                                about-material /&gt;</span>
+                            </div>
                         </div>
                     </div>
-                </form>
+                    <div class="card-content white-text">
+                        <div class="card-title">
+                            <h4>about-material</h4>
+                        </div>Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Aliquam vel purus sagittis, eleifend
+                        ante quis, tempus lectus. Vivamus maximus nibh lectus,
+                        sed gravida sapien imperdiet in.<br>
+                        <br>
+                        Curabitur non purus rutrum, iaculis mauris ac, placerat
+                        turpis. Donec vel semper enim, ut ultrices sem. Fusce
+                        rutrum, justo id porta malesuada, purus erat gravida
+                        metus, sit amet viverra turpis lacus nec mi. Aliquam et
+                        mi vel ipsum mollis aliquam eu eget augue. Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit.<br>
+                        <br>
+                        Aliquam vel purus sagittis, eleifend ante quis, tempus
+                        lectus. Vivamus maximus nibh lectus, sed gravida sapien
+                        imperdiet in. Curabitur non purus rutrum, iaculis
+                        mauris ac, placerat turpis. Donec vel semper enim, ut
+                        ultrices sem.<br>
+                        <br>
+                        Fusce rutrum, justo id porta malesuada, purus erat
+                        gravida metus, sit amet viverra turpis lacus nec mi.
+                        Aliquam et mi vel ipsum mollis aliquam eu eget augue.
+                    </div>
+                </div>
+                <div class="row">
+                    <h1><br>
+                    -advantages-<br></h1>
+                    <div class="container-fluid">
+                        <div class="col s12 m6">
+                            <ul>
+                                <li class=
+                                "card advantage cyan white-text darken-1 waves-effect waves-light">
+                                <h4>completely-free</h4>Material is completely
+                                free for whatever use you may ever want to use
+                                it for under the terms of the MIT Licence.
+                                </li>
+                                <li class=
+                                "card advantage cyan white-text waves-effect waves-light">
+                                <h4>fully-open-source</h4>Material's source
+                                code is fully open source and is hosted at
+                                GitHub
+                                (https://github.com/naveenshaji/material/). It
+                                is released under the terms of the MIT Licence.
+                                </li>
+                                <li class=
+                                "card advantage cyan white-text darken-1 waves-effect waves-light">
+                                <h4>material-design</h4>Material is based on
+                                google's material design specifications. duh!
+                                All you need to know is that it look solid and
+                                feels solid.
+                                </li>
+                                <li class=
+                                "card advantage cyan white-text waves-effect waves-light">
+                                <h4>ease-of-access</h4>Your blog or website
+                                will be hosted on a GitHub repository and
+                                therefore, you will be able to just 'commit'
+                                new blog posts. Plus you get all the benefits
+                                of GitHub if you are making a collaborated
+                                blog.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col s12 m6">
+                            <ul>
+                                <li class=
+                                "card advantage cyan white-text waves-effect waves-light">
+                                <h4>hosted-on-github</h4>Your website/blog can
+                                be hosted for free on GitHub, which means you
+                                get to take advantage of GitHub's servers which
+                                have proven themselves to provide almost 100%
+                                uptime.
+                                </li>
+                                <li class=
+                                "card advantage cyan white-text darken-1 waves-effect waves-light">
+                                <h4>feel-like-hax0r</h4>Commiting new blogposts
+                                written in markdown is sure to give you the
+                                feels. Having your blog hosted alongside code
+                                will make you feel like a mini-hax0r even if
+                                you are not one.
+                                </li>
+                                <li class=
+                                "card advantage cyan white-text waves-effect waves-light">
+                                <h4>write-in-markdown</h4>WSIWYG editors are
+                                for losers. Markdown ftw!!
+                                </li>
+                                <li class=
+                                "card advantage cyan white-text darken-1 waves-effect waves-light">
+                                <h4>mit-licence</h4>Material is released under
+                                the terms of the MIT Licence which give you a
+                                lot of freedom regarding editing the code
+                                involved.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <h1><br>
+                    -get-started-<br></h1>
+                    <div class="container-fluid">
+                        There are 7 simple steps to get your website up and
+                        running using material. Keep scrolling to see em'. The
+                        steps mentioned here have been explained in order to
+                        cater to n00bs. If you think you are pro, then scroll
+                        faster. xP
+                    </div>
+                </div>
             </div>
-            <div class="col l3 s12">
-                <h5 class="white-text">joashpereira.com</h5>
-                <ul>
-                    <li><a class="white-text" href="http://www.joashpereira.com/">Home</a></li>
-                    <li><a class="white-text" href="http://www.joashpereira.com/blog">Blog</a></li>
-                </ul>
+        </div>
+        <div class=
+        "container-fluid card cyan z-depth-2 waves-effect waves-light">
+            <div class="cover z-depth-1" style=
+            "background-image: url('img/1.jpg');">
+                <div class="filter cyan">
+                    <div class="cover-text cyan-text text-darken-4">
+                        Four
+                    </div>
+                </div>
             </div>
-            <div class="col l3 s12">
-                <h5 class="white-text">Social</h5>
-                <ul>
-                    <li>
-                        <a class="white-text" href="https://www.behance.net/joashp">
-                            <i class="small fa fa-behance-square white-text"></i> Behance
-                        </a>
-                    </li>
-                    <li>
-                        <a class="white-text" href="https://www.facebook.com/joash.c.pereira">
-                            <i class="small fa fa-facebook-square white-text"></i> Facebook
-                        </a>
-                    </li>
-                    <li>
-                        <a class="white-text" href="https://github.com/joashp">
-                            <i class="small fa fa-github-square white-text"></i> Github
-                        </a>
-                    </li>
-                    <li>
-                        <a class="white-text" href="https://www.linkedin.com/in/joashp">
-                            <i class="small fa fa-linkedin-square white-text"></i> Linkedin
-                        </a>
-                    </li>
-                </ul>
+            <div class="card-content white-text">
+                <div class="card-title">
+                    Step - 4 - Change to master branch
+                </div>Go to the newly-forked repository's settings and change
+                the <b>default branch</b> to <b>master</b> from the drop-down
+                menu. All your changes from now on must be done in the
+                <b>master</b> branch. You may optionally delete the gh-pages
+                branch to avoid accidentally pushing your changes to that
+                branch, in which case you won't see the changes. Click button
+                below for detailed instructions on how to acheive this.
+            </div>
+            <div class="card-action cyan darken-2">
+                <button class=
+                "cyan darken-1 white-text text-darken-3 waves-effect waves-light btn">
+                View Post</button> <button class=
+                "cyan darken-1 white-text text-darken-3 waves-effect waves-light btn">
+                Bookmark!</button>
+            </div>
+        </div>
+        <div class=
+        "container-fluid card cyan z-depth-2 waves-effect waves-light">
+            <div class="cover z-depth-1" style=
+            "background-image: url('/material//img/0.jpg');">
+                <div class="filter cyan">
+                    <div class="cover-text cyan-text text-darken-4">
+                        Four
+                    </div>
+                </div>
+            </div>
+            <div class="card-content white-text">
+                <div class="card-title">
+                    Step - 4 - Change to master branch
+                </div>Go to the newly-forked repository's settings and change
+                the <b>default branch</b> to <b>master</b> from the drop-down
+                menu. All your changes from now on must be done in the
+                <b>master</b> branch. You may optionally delete the gh-pages
+                branch to avoid accidentally pushing your changes to that
+                branch, in which case you won't see the changes. Click button
+                below for detailed instructions on how to acheive this.
+            </div>
+            <div class="card-action cyan darken-2">
+                <button class=
+                "cyan darken-1 white-text text-darken-3 waves-effect waves-light btn">
+                View Post</button> <button class=
+                "cyan darken-1 white-text text-darken-3 waves-effect waves-light btn">
+                Bookmark!</button>
             </div>
         </div>
     </div>
-    <div class="footer-copyright default_color">
-        <div class="container">
-            Synergie is an association
-        </div>
-    </div>
-</footer>
-
-
-    <!--  Scripts-->
-    <script src="min/plugin-min.js"></script>
-    <script src="min/custom-min.js"></script>
-
-    </body>
-</html>
-
+</div>
+@endsection
+            
