@@ -13,6 +13,7 @@
     <link href="css/materialize.min.css" media="screen,projection" rel=
     "stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="http://naveenshaji.github.io/material/material//blog/" rel=
     "canonical">
     <script src="js/jquery.min.js" type="text/javascript">
