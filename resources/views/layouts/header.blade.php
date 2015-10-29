@@ -36,10 +36,10 @@
     <script src="js/main.js" type="text/javascript">
     </script>
 </head>
-<body class="cyan lighten-5">
+<body class="blue-grey lighten-5">
 <header class="site-header">
     <div class="navbar-fixed">
-        <nav class="cyan darken-2 waves-effect waves-light">
+        <nav class="indigo waves-effect waves-light">
             <div class="nav-wrapper">
                 <div class="container">
                     <a class="brand-logo" href="{{ route('home') }}"><i class="mdi-communication-chat"></i> synergie</a>
@@ -82,7 +82,7 @@
     </div>
 </div>
 <br>
-<footer class="page-footer cyan darken-2">
+<footer class="page-footer blue-grey darken-3">
     <div class="container">
         <div class="row">
             <div class="col l3 m6 s12">

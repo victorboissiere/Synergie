@@ -1,6 +1,7 @@
 @extends('layouts.header')
 @section('page')
-    <div class="wrapper cyan-text text-darken-3">
+    <br><br>
+    <div class="wrapper indigo-text text-darken-3">
         <div id="skrollr-body">
             <div class="post">
 
@@ -37,7 +38,7 @@
                 <br/>
                 <hr/>
                 <br/>
-                <button class="cyan darken-1 white-text text-darken-3 waves-effect waves-cyan waves-light btn">
+                <button class="indigo darken-1 white-text text-darken-3 waves-effect waves-cyan waves-light btn">
                     Share
                 </button>
                 <br/>&nbsp;
