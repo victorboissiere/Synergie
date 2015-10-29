@@ -28,7 +28,11 @@ sudo chmod -R 777 storage/
 ```
 
 ###Setting the database
-No database required at the moment
+You need to setup a database and then run the command below.
+```
+php artisan migrate
+php artisan db:seed
+```
 
 ##Available commands
 All the commands available can be found using : php artisan
