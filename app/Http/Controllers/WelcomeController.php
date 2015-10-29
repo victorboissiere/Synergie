@@ -22,4 +22,8 @@ class WelcomeController extends Controller
     {
         return view('blog');
     }
+    public function about()
+    {
+        return view('about');
+    }
 }

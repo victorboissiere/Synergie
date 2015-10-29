@@ -51,7 +51,7 @@
                             <a href="{{ route('blog')}}">Blog</a>
                         </li>
                         <li>
-                            <a href="{{ route('home') }}">À propos</a>
+                            <a href="{{ route('about') }}">À propos</a>
                         </li>
                         <li>
                             <a href="http://github.com/victorboissiere/Synergie" target="_blank">GitHub</a>

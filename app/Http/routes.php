@@ -13,6 +13,7 @@
 
 Route::get('/', array('as' => 'home', 'uses' => 'WelcomeController@index'));
 Route::get('/blog', array('as' => 'blog', 'uses' => 'WelcomeController@blog'));
+Route::get('/a-propos', array('as' => 'about', 'uses' => 'WelcomeController@about'));
 Route::get(env('ADMIN_URL', 'admin'), array('as' => 'login', 'uses' => 'Admin\LoginController@login'));
 Route::post(env('ADMIN_URL', 'admin'), array('as' => 'postLogin', 'uses' => 'Admin\LoginController@postLogin'));
 Route::get('/dashboard', array('as' => 'dashboard', 'uses' => 'Admin\DashboardController@index'));
