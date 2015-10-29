@@ -13,6 +13,6 @@
 
 Route::get('/', 'WelcomeController@index');
 Route::get('/blog', 'WelcomeController@blog');
-Route::get('/admin', 'AdminController@login');
-Route::post('/admin', 'AdminController@postLogin');
+Route::get(env('ADMIN_URL', 'admin'), 'AdminController@login');
+Route::post(env('ADMIN_URL', 'admin'), 'AdminController@postLogin');
 Route::get('/dashboard', 'AdminController@index');

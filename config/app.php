@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'url' => 'http://synergie.tivbroc.com',
+    'url' => env('SITE_URL', 'localhost'),
 
     /*
     |--------------------------------------------------------------------------
