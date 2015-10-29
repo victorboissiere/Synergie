@@ -15,7 +15,7 @@
                 direction   : 'horizontal',
                 frontColor  : '#2ecc71',
                 opacity     : 1,
-                position    : 'top',
+                position    : 'topt',
                 reverse     : false,
                 weight      : 5,
                 zindex      : 9999,
@@ -84,7 +84,7 @@
                         position: 'absolute',
                         right : rFront,
                         top: tFront,
-                        width : 0
+                        width : 0,
                     }).appendTo(self.$back);
 
                     self.$back.addClass("{{ site.css }} darken-2").css({
@@ -101,6 +101,7 @@
                         top: tBack,
                         width : 0,
                         zIndex : self.params.zindex,
+                        display: 'none',
                     }).appendTo('body');
 
                     $(window).on("load resize scroll orientationchange", function() {

@@ -142,36 +142,7 @@
             </div>
         </div>
         <div class=
-        "container-fluid card cyan z-depth-2 waves-effect waves-light">
-            <div class="cover z-depth-1" style=
-            "background-image: url('img/1.jpg');">
-                <div class="filter cyan">
-                    <div class="cover-text cyan-text text-darken-4">
-                        Four
-                    </div>
-                </div>
-            </div>
-            <div class="card-content white-text">
-                <div class="card-title">
-                    Step - 4 - Change to master branch
-                </div>Go to the newly-forked repository's settings and change
-                the <b>default branch</b> to <b>master</b> from the drop-down
-                menu. All your changes from now on must be done in the
-                <b>master</b> branch. You may optionally delete the gh-pages
-                branch to avoid accidentally pushing your changes to that
-                branch, in which case you won't see the changes. Click button
-                below for detailed instructions on how to acheive this.
-            </div>
-            <div class="card-action cyan darken-2">
-                <button class=
-                "cyan darken-1 white-text text-darken-3 waves-effect waves-light btn">
-                View Post</button> <button class=
-                "cyan darken-1 white-text text-darken-3 waves-effect waves-light btn">
-                Bookmark!</button>
-            </div>
-        </div>
-        <div class=
-        "container-fluid card cyan z-depth-2 waves-effect waves-light">
+        "container-fluid card cyan z-depth-2">
             <div class="cover z-depth-1" style=
             "background-image: url('/material//img/0.jpg');">
                 <div class="filter cyan">

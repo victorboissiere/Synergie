@@ -6587,6 +6587,7 @@ ul.table-of-contents a {
   height: 100%;
   width: 10px;
   position: fixed;
+  display: none;
   top: 0;
   z-index: 998; }
 

@@ -10,22 +10,21 @@
     name="description">
     <meta content="width=device-width, initial-scale=0.7, user-scalable=0"
     name="viewport"><!--Import materialize.css-->
-    <link href="css/materialize.min.css" media="screen,projection" rel=
+    <link href="css/materialize.css" media="screen,projection" rel=
     "stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="http://naveenshaji.github.io/material/material//blog/" rel=
     "canonical">
-    <script src="js/jquery.min.js" type="text/javascript">
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="js/jquery.nicescroll.min.js">
     </script>
     <script src="js/jquery.nicescroll.plus.js">
     </script>
     <script src="js/velocity.min.js">
     </script>
-    <script src="js/skrollr.min.js">
-    </script>
+    <!--<script src="js/skrollr.min.js">
+    </script>!-->
     <script src="js/jquery.scrolline.js">
     </script>
     <script src="js/modernizr.js" type="text/javascript">
@@ -36,14 +35,6 @@
     </script>
 </head>
 <body class="cyan lighten-5">
-    <div class="preloader cyan container-fluid row">
-        <div class="white-text text-darken-4 xpretext">
-            <h4>material</h4>
-        </div>
-        <div class="progress cyan lighten-2 xpreloading">
-            <div class="indeterminate cyan darken-3"></div>
-        </div>
-    </div>
     <header class="site-header">
         <div class="navbar-fixed">
             <nav class="cyan darken-2 waves-effect waves-light">
@@ -83,21 +74,6 @@
             </div>
         </div>
     </div><br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <footer class="page-footer cyan darken-2">
         <div class="container">
             <div class="row">
