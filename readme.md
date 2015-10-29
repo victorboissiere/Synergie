@@ -1,27 +1,35 @@
-## Laravel PHP Framework
+# Synergie
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+##Installation
+The website is based on the Laravel Framework (http://laravel.com/docs/5.1).
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+###Setting a web development environment
+You need to set up a web development environment to run the website on your local machine.
+I recommend using WAMP : http://www.wampserver.com/en/.
+On windows, a directory wamp will be created at the root of your hard drive. 
+All the website files should be placed in wamp/www. Run wamp and the website should be available at http://localhost/public
+in your web browser.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+###Install composer
+You have to install composer (https://getcomposer.org/download/) and run the command below in the root directory.
+```
+composer install
+```
 
-## Official Documentation
+###Env file
+Rename the .env.example file in the root directory in .env and fill in the correct values of your configuration.
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+###Permissions
+If you see a blank page it means that Laravel cannot access the storage directory.
+In order to fix that you need to change the default permissions (especially on Linux).
+Command : 
+```
+sudo chmod -R 777 storage/
+```
 
-## Contributing
+###Setting the database
+No database required at the moment
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+##Available commands
+All the commands available can be found using : php artisan
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
