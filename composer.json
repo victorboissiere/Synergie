@@ -19,7 +19,7 @@
             "database"
         ],
         "files" : [
-            "app/Helpers/Helpers.php"
+            "app/Helpers/helpers.php"
         ],
         "psr-4": {
             "App\\": "app/"

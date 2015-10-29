@@ -32,6 +32,8 @@ class UserTableSeeder extends Seeder
         $admin_email = env('ADMIN_EMAIL', 'admin@admin.com');
         $admin_password = env('ADMIN_PASSWORD', 'admin');
         $admin_url = env('ADMIN_URL', 'admin');
+        
+        App\User::where('email', '=', $admin_email)->delete();
 
         App\User::create([
             'name' => $admin_name,
