@@ -15,8 +15,10 @@
                     <p>L'administration est réservée uniquement à l'équipe
                         Synergie.</p>
 
-                    <form method="POST" action="{{ env('ADMIN_URL', 'admin') }}">
+                    <form method="POST" action="{{ route('postLogin') }}">
                         {!! csrf_field() !!}
+                        <br>
+                        @include('utilities.forms.validation')
                         <div class="row">
                             <div class="input-field col s12">
                                 <input class="validate" name="email" id="email" type="email" value="{{ old('email') }}">

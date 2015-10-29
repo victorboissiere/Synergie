@@ -12,10 +12,13 @@
     <link href="css/materialize.css" media="screen,projection" rel=
     "stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="http://naveenshaji.github.io/material/material//blog/" rel=
     "canonical">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.nicescroll.min.js">
     </script>
     <script src="js/jquery.nicescroll.plus.js">
@@ -39,20 +42,25 @@
         <nav class="cyan darken-2 waves-effect waves-light">
             <div class="nav-wrapper">
                 <div class="container">
-                    <a class="brand-logo" href="{{ url('') }}"><i class="mdi-communication-chat"></i> synergie</a>
+                    <a class="brand-logo" href="{{ route('home') }}"><i class="mdi-communication-chat"></i> synergie</a>
                     <ul class="right side-nav" id="nav-mobile">
                         <li>
-                            <a href="{{ url('') }}">Accueil</a>
+                            <a href="{{ route('home') }}">Accueil</a>
                         </li>
                         <li>
-                            <a href="{{url('blog')}}">Blog</a>
+                            <a href="{{ route('blog')}}">Blog</a>
                         </li>
                         <li>
-                            <a href="{{ url('') }}">À propos</a>
+                            <a href="{{ route('home') }}">À propos</a>
                         </li>
                         <li>
                             <a href="http://github.com/victorboissiere/Synergie" target="_blank">GitHub</a>
                         </li>
+                        @if (env('APP_ENV') == 'development' || !Auth::guest())
+                            <li>
+                                <a href="{{ route('login') }}">Admin</a>
+                            </li>
+                        @endif
                     </ul>
                     <a class="button-collapse" data-activates="nav-mobile" href="#"><i class="mdi-navigation-menu"></i></a>
                 </div>

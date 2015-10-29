@@ -144,7 +144,7 @@
         <div class=
         "container-fluid card cyan z-depth-2">
             <div class="cover z-depth-1" style=
-            "background-image: url('/material//img/0.jpg');">
+            "background-image: url('img/0.jpg');">
                 <div class="filter cyan">
                     <div class="cover-text cyan-text text-darken-4">
                         Four
