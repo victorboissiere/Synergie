@@ -54,7 +54,7 @@ class UserController extends Controller
     {
         User::create($request->all());
 
-        flash('User added !');
+        flash('Utilisateur créé avec succès');
 
         return redirect()->route('userList');
     }

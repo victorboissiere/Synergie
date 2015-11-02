@@ -10,7 +10,7 @@
     <table>
         <tr>
             <td>ID</td>
-            <td>Username</td>
+            <td>Nom/Prénom</td>
             <td>Email</td>
             <td>Actions</td>
         </tr>
