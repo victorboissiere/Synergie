@@ -7,30 +7,30 @@
     <title>Synergie - Admin</title>
     <meta content="width=device-width, initial-scale=0.7, user-scalable=0" name="viewport">
     <!--Import materialize.css-->
-    <link href="css/materialize.css" media="screen,projection" rel=
+    <link href="{{ asset('css/materialize.css') }}" media="screen,projection" rel=
     "stylesheet" type="text/css">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap-theme.min.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="http://naveenshaji.github.io/material/material//blog/" rel=
     "canonical">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nicescroll.min.js">
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.nicescroll.min.js') }}">
     </script>
-    <script src="js/jquery.nicescroll.plus.js">
+    <script src="{{ asset('js/jquery.nicescroll.plus.js') }}">
     </script>
-    <script src="js/velocity.min.js">
+    <script src="{{ asset('js/velocity.min.js') }}">
     </script>
     <!--<script src="js/skrollr.min.js">
     </script>!-->
-    <script src="js/jquery.scrolline.js">
+    <script src="{{ asset('js/jquery.scrolline.js') }}">
     </script>
-    <script src="js/modernizr.js" type="text/javascript">
+    <script src="{{ asset('js/modernizr.js') }}" type="text/javascript">
     </script>
-    <script src="js/materialize.min.js" type="text/javascript">
+    <script src="{{ asset('js/materialize.min.js') }}" type="text/javascript">
     </script>
-    <script src="js/main.js" type="text/javascript">
+    <script src="{{ asset('js/main.js') }}" type="text/javascript">
     </script>
 </head>
 <body class="cyan lighten-5">
