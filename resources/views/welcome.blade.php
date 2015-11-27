@@ -127,7 +127,7 @@
                 "background-image: url('img/0.jpg');">
                     <div class="filter indigo">
                         <div class="cover-text white-text text-darken-2">
-                            Opening
+                            Test
                         </div>
                     </div>
                 </div>
