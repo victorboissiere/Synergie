@@ -17,9 +17,15 @@ Route::get('/a-propos', array('as' => 'about', 'uses' => 'WelcomeController@abou
 Route::get(env('ADMIN_URL', 'admin'), array('as' => 'login', 'uses' => 'Admin\LoginController@login'));
 Route::post(env('ADMIN_URL', 'admin'), array('as' => 'postLogin', 'uses' => 'Admin\LoginController@postLogin'));
 Route::get('/dashboard', array('as' => 'dashboard', 'uses' => 'Admin\DashboardController@index'));
-Route::get('/admin/posts', array('as' => 'adminPosts', 'uses' => 'Admin\Posts\PostsController@index'));
+
+//post
+Route::resource('admin-posts', 'Admin\Posts\PostsController',
+                ['except' => 'show']);
+
+//users
 Route::get('/admin/users', array('as' => 'userList', 'uses' => 'Admin\Users\UserController@index'));
 Route::get('/admin/users/create', array('as' => 'userCreate', 'uses' => 'Admin\Users\UserController@create'));
 Route::post('/admin/users/create', array('as' => 'userPostCreate', 'uses' => 'Admin\Users\UserController@postCreate'));
 Route::get('/admin/users/delete/{id}', array('as' => 'userDelete', 'uses' => 'Admin\Users\UserController@delete'));
+
 Route::get('auth/logout', 'Auth\AuthController@getLogout');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin\Posts;
 
+use App\Http\Requests\Posts\PostRequest;
 use App\Post;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,7 @@ use App\Http\Controllers\Controller;
 class PostsController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display all posts
      *
      * @return \Illuminate\Http\Response
      */
@@ -22,35 +23,28 @@ class PostsController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Display form to create new article
      *
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        //
+        return view('admin.posts.post_create');
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store new article data
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param PostRequest|Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
-        //
-    }
+        Post::create($request->all());
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        flash('Article ajouté avec succès');
+
+        return redirect()->route('admin-posts.index');
     }
 
     /**
@@ -61,19 +55,27 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::findOrFail($id);
+
+        return view('admin.posts.post_create', compact('post'));
     }
 
     /**
-     * Update the specified resource in storage.
+     * Show form to update post with right data
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param PostRequest|Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PostRequest $request, $id)
     {
-        //
+        $post = Post::findOrFail($id);
+
+        $post->update($request->all());
+
+        flash('Article modifié avec succès');
+
+        return redirect()->route('admin-posts.index');
     }
 
     /**
@@ -84,6 +86,12 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::findOrFail($id);
+
+        $post->delete();
+
+        flash('Article supprimé avec succès');
+
+        return redirect()->route('admin-posts.index');
     }
 }
