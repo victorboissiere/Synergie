@@ -18,6 +18,7 @@ composer install
 
 ###Env file
 Rename the .env.example file in the root directory in .env and fill in the correct values of your configuration.
+Comments should also be removed.
 
 ###Permissions
 If you see a blank page it means that Laravel cannot access the storage directory.
@@ -37,3 +38,17 @@ php artisan db:seed
 ##Available commands
 All the commands available can be found using : php artisan
 
+##Installation issues
+###MCrypt
+For an issue related to mcrypt, be sure to enable/install PHP extension mcrypt.
+###404 page not found
+If you cannot click on pages without a 404 error page not found, it is probably
+because you haven't allowed your website to override apache rules with .htaccess.
+In order to do so, you can add this quick fix at the top of your virtual host configuration file (for apache users)
+
+```
+<Directory /var/www/>
+    AllowOverride all
+</Directory>
+```
+This file is usually available in /etc/apache2/sites-enabled/000-default.conf.
