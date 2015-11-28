@@ -3,7 +3,7 @@
     <br>
     Logged ! Admin in construction.
     <br>
-    <a href="{{ route('userList') }}">Utilisateurs</a>
+    <a href="{{ route('admin-users.index') }}">Utilisateurs</a>
     <br>
     <a href="{{ route('admin-posts.index') }}">Articles</a>
 @endsection

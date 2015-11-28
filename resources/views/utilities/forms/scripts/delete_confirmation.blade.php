@@ -12,7 +12,7 @@
                     _token : token
                 },
                 success: function (data) {
-                    $('.post-' + id).remove();
+                    $('.item-' + id).remove();
                 },
                 error: function(xhr, ajaxOptions, thrownError)
                 {

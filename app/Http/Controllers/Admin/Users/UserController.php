@@ -50,23 +50,64 @@ class UserController extends Controller
      * @param UserRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function postCreate(UserRequest $request)
+    public function store(UserRequest $request)
     {
         User::create($request->all());
 
         flash('Utilisateur créé avec succès');
 
-        return redirect()->route('userList');
+        return redirect()->route('admin-users.index');
     }
 
+    /**
+     * Display form to edit user
+     *
+     * @param $id
+     */
+    public function edit($id)
+    {
+
+    }
+
+    /**
+     * Send modified data
+     *
+     * @param UserRequest $request
+     */
+    public function update(UserRequest $request)
+    {
+
+    }
+
+
+    /**
+     * Delete user
+     *
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function delete($id)
     {
-        $user = User::findOrFail($id);
+        $user = User::find($id);
 
-        $user->delete($id);
+        if (is_null($user))
+        {
+            return response()->json([
+                'message' => 'Utilisateur introuvable'
+            ], 400);
+        }
+        else if ($user->id == Auth::id())
+        {
+            return response()->json([
+                'message' => 'Vous ne pouvez pas vous supprimer'
+            ], 400);
+        }
 
-        flash('Utilisateur supprimé avec succès');
+        $user->delete();
 
-        return redirect()->route('userList');
+        return response()->json([
+            'message' => 'Utilisateur supprimé avec succès'
+        ], 200);
+
     }
 }

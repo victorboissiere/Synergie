@@ -1,7 +1,7 @@
 @extends('admin.layouts.header')
 @section('page')
     <br>
-    <h4>Articles (en cours)</h4>
+    <h4>Articles</h4>
     <br>
     <a href="{{ route('admin-posts.create')  }}">Ajouter un article</a>
     <br>
@@ -16,7 +16,7 @@
             <td>Actions</td>
         </tr>
         @foreach ($posts as $post)
-            <tr class="post-{{ $post->id }}">
+            <tr class="item-{{ $post->id }}">
                 <td>{{ $post->id }}</td>
                 <td>{{ str_limit($post->title, 20) }}</td>
                 <td>À venir</td>

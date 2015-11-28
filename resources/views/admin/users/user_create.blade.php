@@ -2,8 +2,8 @@
 @section('page')
     <br>
     <h4>Nouvel utilisateur</h4>
-    <a href="{{ route('userList') }}">Liste des utilisateurs</a>
-    <form method="POST" action="{{ route('userPostCreate') }}">
+    <a href="{{ route('admin-users.index') }}">Liste des utilisateurs</a>
+    <form method="POST" action="{{ route('admin-users.store') }}">
         {!! csrf_field() !!}
         <br>
         @include('utilities.forms.validation')

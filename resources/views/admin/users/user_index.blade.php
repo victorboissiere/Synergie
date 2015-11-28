@@ -3,7 +3,7 @@
     <br>
     <h4>Utilisateurs (en cours)</h4>
     <br>
-    <a href="{{ route('userCreate')  }}">Ajouter un utilisateur</a>
+    <a href="{{ route('admin-users.create')  }}">Ajouter un utilisateur</a>
     <br>
     @include('utilities.forms.validation')
     <br>
@@ -15,14 +15,14 @@
             <td>Actions</td>
         </tr>
         @foreach ($users as $user)
-            <tr>
+            <tr class="item-{{ $user->id }}">
                 <td>{{ $user->id }}</td>
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->email }}</td>
                 <td>
                     <a href="#">Modifier</a>
                     //
-                    <a href="{{ route('userDelete', $user->id) }}">Supprimer (no warning yet)</a>
+                    <a href="{{ route('admin-users.destroy', $user->id) }}">Supprimer (no warning yet)</a>
                 </td>
             </tr>
         @endforeach
