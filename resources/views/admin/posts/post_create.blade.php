@@ -34,7 +34,7 @@
                 <label for="password">Mot de passe</label>
             </div>
         </div>
-        <button class="btn waves-effect waves-light right" name="action" type="submit">Ajouter
+        <button class="btn waves-effect waves-light right" name="action" type="submit">Se connecter
             <i class="material-icons right">send</i>
         </button>
     </form>
