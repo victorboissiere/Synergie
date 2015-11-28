@@ -111,52 +111,47 @@
                     </div>
                     <div class="row">
                         <h1><br>
-                            -synergie-<br></h1>
+                            Articles récents<br></h1>
 
                         <div class="container-fluid">
-                            Fusce rutrum, justo id porta malesuada, purus erat
-                            gravida metus, sit amet viverra turpis lacus nec mi.
-                            Aliquam et mi vel ipsum mollis aliquam eu eget augue.
+                            Derniers articles du blog
                         </div>
                     </div>
                 </div>
             </div>
-            <div class=
-                 "container-fluid card indigo z-depth-2">
-                <div class="cover z-depth-1" style=
-                "background-image: url('img/0.jpg');">
-                    <div class="filter indigo">
-                        <div class="cover-text white-text text-darken-2">
-                            Test
+            @foreach($posts as $post)
+                <div class="container-fluid card indigo z-depth-2">
+                    <div class="cover z-depth-1" style="background-image: url('img/0.jpg');">
+                        <div class="filter indigo">
+                            <div class="cover-text white-text text-darken-2">
+                                {{ $post->title }}
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-content white-text">
-                    <div class="card-title">
-                        Open source - Website
+                    <div class="card-content white-text">
+                        <!--
+                        <div class="card-title">
+                            {{ $post->content }}
+                        </div>
+                        !-->
+                        {{ $post->content }}
                     </div>
-                    Fusce rutrum, justo id porta malesuada, purus erat
-                    gravida metus, sit amet viverra turpis lacus nec mi.
-                    Aliquam et mi vel ipsum mollis aliquam eu eget augue.Fusce rutrum, justo id porta malesuada, purus erat
-                    gravida metus, sit amet viverra turpis lacus nec mi.
-                    Aliquam et mi vel ipsum mollis aliquam eu eget augue.Fusce rutrum, justo id porta malesuada, purus erat
-                    gravida metus, sit amet viverra turpis lacus nec mi.
-                    Aliquam et mi vel ipsum mollis aliquam eu eget augue.Fusce rutrum, justo id porta malesuada, purus erat
-                    gravida metus, sit amet viverra turpis lacus nec mi.
-                    Aliquam et mi vel ipsum mollis aliquam eu eget augue.
+                    <div class="card-action indigo darken-2">
+                        <button class="indigo darken-1 white-text text-darken-3 waves-effect waves-light btn">
+                            View Post
+                        </button>
+                        <button class="indigo darken-1 white-text text-darken-3 waves-effect waves-light btn">
+                            Bookmark!
+                        </button>
+                    </div>
                 </div>
-                <div class="card-action indigo darken-2">
-                    <button class=
-                            "indigo darken-1 white-text text-darken-3 waves-effect waves-light btn">
-                        View Post
-                    </button>
-                    <button class=
-                            "indigo darken-1 white-text text-darken-3 waves-effect waves-light btn">
-                        Bookmark!
-                    </button>
-                </div>
-            </div>
+            @endforeach
             <br><br><br>
+            <div class="center-align">
+            <button class="blue darken-1 white-text text-darken-3 waves-effect waves-light btn">
+                Voir tous les articles
+            </button>
+            </div>
         </div>
     </div>
 @endsection

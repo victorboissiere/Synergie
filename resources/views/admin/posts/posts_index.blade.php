@@ -21,7 +21,7 @@
                 <td>{{ str_limit($post->title, 20) }}</td>
                 <td>À venir</td>
                 <td>
-                    <a href="{{ route('admin-posts.edit', $post->id) }}">Modifier (en cours)</a>
+                    <a href="{{ route('admin-posts.edit', $post->id) }}">Modifier</a>
                     //
                     <a href="{{ route('admin-posts.destroy', $post->id) }}" data-id="{{ $post->id }}" class="removeItem">Supprimer</a>
                 </td>

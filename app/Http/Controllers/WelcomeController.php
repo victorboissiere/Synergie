@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -15,7 +16,8 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        $posts = Post::take(5)->get();
+        return view('welcome', compact('posts'));
     }
     
     public function blog()
