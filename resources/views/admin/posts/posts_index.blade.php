@@ -22,7 +22,7 @@
                 <td>
                     <a href="{{ route('admin-posts.edit', $post->id) }}">Modifier</a>
                     //
-                    <a href="#">Supprimer (no warning yet)</a>
+                    <a href="#">Supprimer</a>
                 </td>
             </tr>
         @endforeach

@@ -12,6 +12,14 @@ use App\Http\Controllers\Controller;
 class PostsController extends Controller
 {
     /**
+     * Do not allow guest user to access methods in this class
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
      * Display all posts
      *
      * @return \Illuminate\Http\Response
