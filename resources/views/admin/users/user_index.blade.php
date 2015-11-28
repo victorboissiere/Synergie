@@ -10,7 +10,7 @@
     <table>
         <tr>
             <td>ID</td>
-            <td>Nom/Prénom</td>
+            <td>Nom/PrÃ©nom</td>
             <td>Email</td>
             <td>Actions</td>
         </tr>
@@ -21,6 +21,7 @@
                 <td>{{ $user->email }}</td>
                 <td>
                     <a href="#">Modifier</a>
+                    //
                     <a href="{{ route('userDelete', $user->id) }}">Supprimer (no warning yet)</a>
                 </td>
             </tr>
