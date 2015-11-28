@@ -94,12 +94,19 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        $post = Post::findOrFail($id);
+        $post = Post::find($id);
+
+        if (is_null($post))
+        {
+            return response()->json([
+                'message' => 'Article introuvable'
+            ], 400);
+        }
 
         $post->delete();
 
-        flash('Article supprimé avec succès');
-
-        return redirect()->route('admin-posts.index');
+        return response()->json([
+            'message' => 'Article supprimé avec succès'
+        ], 200);
     }
 }

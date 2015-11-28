@@ -71,5 +71,6 @@
     </div>
 </div>
 <br>
+@yield('scripts')
 </body>
 </html>
