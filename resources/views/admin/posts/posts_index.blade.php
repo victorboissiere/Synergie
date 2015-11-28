@@ -11,14 +11,14 @@
     <table>
         <tr>
             <td>ID</td>
-            <td>Description</td>
+            <td>Titre</td>
             <td>Date</td>
             <td>Actions</td>
         </tr>
         @foreach ($posts as $post)
             <tr class="post-{{ $post->id }}">
                 <td>{{ $post->id }}</td>
-                <td>{{ $post->description }}</td>
+                <td>{{ str_limit($post->title, 20) }}</td>
                 <td>À venir</td>
                 <td>
                     <a href="{{ route('admin-posts.edit', $post->id) }}">Modifier</a>
