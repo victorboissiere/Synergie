@@ -6,6 +6,7 @@
     <a href="{{ route('admin-users.create')  }}">Ajouter un utilisateur</a>
     <br>
     @include('utilities.forms.validation')
+    {!! csrf_field() !!}
     <br>
     <table>
         <tr>
@@ -22,10 +23,13 @@
                 <td>
                     <a href="#">Modifier</a>
                     //
-                    <a href="{{ route('admin-users.destroy', $user->id) }}">Supprimer (no warning yet)</a>
+                    <a href="{{ route('admin-users.destroy', $user->id) }}" class="removeItem" data-id="{{ $user->id }}">Supprimer</a>
                 </td>
             </tr>
         @endforeach
     </table>
     {!! $users->render() !!}
+@endsection
+@section('scripts')
+    @include('utilities.forms.scripts.delete_confirmation')
 @endsection

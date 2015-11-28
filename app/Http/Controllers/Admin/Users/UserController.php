@@ -9,6 +9,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 Use App\User;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -86,7 +87,7 @@ class UserController extends Controller
      * @param $id
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function delete($id)
+    public function destroy($id)
     {
         $user = User::find($id);
 
@@ -108,6 +109,5 @@ class UserController extends Controller
         return response()->json([
             'message' => 'Utilisateur supprimé avec succès'
         ], 200);
-
     }
 }
