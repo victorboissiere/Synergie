@@ -22,7 +22,8 @@ class WelcomeController extends Controller
     
     public function blog()
     {
-        return view('blog');
+        $posts = Post::paginate(10);
+        return view('blog', compact('posts'));
     }
     public function about()
     {
