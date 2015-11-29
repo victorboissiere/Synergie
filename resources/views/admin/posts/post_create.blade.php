@@ -25,19 +25,22 @@
         @endif
         <div class="row">
             <div class="input-field col s12">
-                <input class="validate" name="title" id="title" type="text" value="{{ isset($post) && empty(old('title')) ? $post->title : old('title') }}">
+                <input class="validate" name="title" id="title" type="text" autocomplete="off"
+                       value="{{ isset($post) && empty(old('title')) ? $post->title : old('title') }}">
                 <label for="title">Titre</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input class="validate" name="description" id="description" type="text" value="{{ isset($post) && empty(old('description')) ? $post->description : old('description') }}">
+                <input class="validate" name="description" id="description" type="text" autocomplete="off"
+                       value="{{ isset($post) && empty(old('description')) ? $post->description : old('description') }}">
                 <label for="description">Description</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input class="validate" name="content" id="content" type="text" value="{{ isset($post) && empty(old('content')) ? $post->content : old('content') }}">
+                <input class="validate" name="content" id="content" type="text"  autocomplete="off"
+                       value="{{ isset($post) && empty(old('content')) ? $post->content : old('content') }}">
                 <label for="content">Contenu</label>
             </div>
         </div>
