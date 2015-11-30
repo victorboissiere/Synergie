@@ -1,4 +1,8 @@
 @extends('admin.layouts.header')
+@section('header')
+    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'textarea' });</script>
+@endsection
 @section('page')
     <br>
     @if(isset($post))
@@ -39,9 +43,9 @@
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input class="validate" name="content" id="content" type="text"  autocomplete="off"
-                       value="{{ isset($post) && empty(old('content')) ? $post->content : old('content') }}">
-                <label for="content">Contenu</label>
+                <textarea name="content">
+                    {{ isset($post) && empty(old('content')) ? $post->content : old('content') }}
+                </textarea>
             </div>
         </div>
         <button class="btn waves-effect waves-light right" name="action" type="submit">{{ isset($post) ? 'Modifier' : 'Ajouter' }}

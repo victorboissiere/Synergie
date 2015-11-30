@@ -134,7 +134,7 @@
                             {{ $post->content }}
                         </div>
                         !-->
-                        {{ $post->content }}
+                        {!! $post->content !!}
                     </div>
                     <div class="card-action indigo darken-2">
                         <button class="indigo darken-1 white-text text-darken-3 waves-effect waves-light btn">

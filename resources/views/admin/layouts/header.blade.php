@@ -32,6 +32,7 @@
     </script>
     <script src="{{ asset('js/main.js') }}" type="text/javascript">
     </script>
+    @yield('header')
 </head>
 <body class="cyan lighten-5">
 <header class="site-header">
