@@ -16,13 +16,13 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        $posts = Post::take(5)->get();
+        $posts = Post::take(5)->orderBy('created_at', 'desc')->get();
         return view('welcome', compact('posts'));
     }
     
     public function blog()
     {
-        $posts = Post::paginate(10);
+        $posts = Post::orderBy('created_at', 'desc')->paginate(10);
         return view('blog', compact('posts'));
     }
     public function about()
