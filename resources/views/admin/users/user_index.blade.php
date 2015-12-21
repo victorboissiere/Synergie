@@ -1,4 +1,10 @@
 @extends('admin.layouts.header')
+@section('title')
+  @include('admin.utilities.title', [
+    'title' => 'Users',
+    'description' => ''
+  ])
+@endsection
 @section('page')
     <br>
     <h4>Utilisateurs (en cours)</h4>
