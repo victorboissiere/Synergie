@@ -7,8 +7,6 @@
   @if ($type != "textarea")
     <input name="{{ $name }}" id="{{ $name }}" type="{{ $type }}" autocomplete="off" class="form-control" value="{{ $content }}">
   @else
-    <textarea name="{{ $name }}">
-      {{ $content }}
-    </textarea>
+    <textarea name="{{ $name }}">{{ $content }}</textarea>
   @endif
 </div>
