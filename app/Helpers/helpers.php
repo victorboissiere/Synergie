@@ -20,6 +20,7 @@ function get_global_settings($key)
 
     if (is_null($settings))
     {
+        //cache settings for one day
         $settings = Cache::remember('settings', 24*60, function() {
             return App\Setting::find(1)->data;
         });

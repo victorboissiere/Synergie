@@ -1,4 +1,5 @@
 @extends('layouts.header')
+
 @section('page')
     <div class="wrapper indigo-text text-darken-3">
         <div>
@@ -155,4 +156,3 @@
         </div>
     </div>
 @endsection
-            

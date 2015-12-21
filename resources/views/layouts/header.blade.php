@@ -4,9 +4,8 @@
     <meta charset="utf-8">
     <meta content="width=device-width initial-scale=1" name="viewport">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <title>Synergie</title>
-    <meta content="Hello, I'm Naveen, a freelance front-end developer and UI designer. Check out my projects on GitHub"
-          name="description">
+    <title>{{ get_global_settings('website_title') }}</title>
+    <meta content="{{ get_global_settings('website_description') }}" name="description">
     <meta content="width=device-width, initial-scale=0.7, user-scalable=0" name="viewport">
     <!--Import materialize.css-->
     <link href="css/materialize.css" media="screen,projection" rel=
@@ -35,6 +34,7 @@
     </script>
     <script src="js/main.js" type="text/javascript">
     </script>
+    {!! get_global_settings('code_header') !!}
 </head>
 <body class="blue-grey lighten-5">
 <header class="site-header">
@@ -136,5 +136,6 @@
         </div>
     </div>
 </footer>
+{!! get_global_settings('code_footer') !!}
 </body>
 </html>
