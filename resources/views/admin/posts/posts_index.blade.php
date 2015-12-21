@@ -1,6 +1,11 @@
 @extends('admin.layouts.header')
+@section('title')
+  @include('admin.utilities.title', [
+    'title' => 'Blog posts',
+    'description' => ''
+  ])
+@endsection
 @section('page')
-
 @include('utilities.forms.validation')
 {!! csrf_field() !!}
 
