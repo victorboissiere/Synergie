@@ -31,21 +31,21 @@
             'label' => 'Title',
             'name' => 'title',
             'type' => 'text',
-            'content' => isset($post) && empty(old('title')) ? $post->title : old('title')
+            'content' => old('title', isset($post) ? $post->title : '')
           ])
 
           @include('utilities.forms.input', [
             'label' => 'Description',
             'name' => 'description',
             'type' => 'text',
-            'content' => isset($post) && empty(old('description')) ? $post->description : old('description')
+            'content' => old('description', isset($post) ? $post->description : '')
           ])
 
           @include('utilities.forms.input', [
             'label' => 'Content',
             'name' => 'content',
             'type' => 'textarea',
-            'content' => isset($post) && empty(old('content')) ? $post->content : old('content')
+            'content' => old('content', isset($post) ? $post->content : '')
           ])
 
           <div class="box-footer">

@@ -28,21 +28,21 @@
             'label' => 'First and last name',
             'name' => 'name',
             'type' => 'text',
-            'content' => isset($user) && empty(old('name')) ? $user->name : old('name')
+            'content' => old('name', isset($user) ? $user->name : '')
           ])
 
           @include('utilities.forms.input', [
             'label' => 'Email',
             'name' => 'email',
             'type' => 'email',
-            'content' => isset($user) && empty(old('email')) ? $user->email : old('email')
+            'content' => old('email', isset($email) ? $user->email : '')
           ])
 
           @include('utilities.forms.input', [
             'label' => 'Password',
             'name' => 'password',
             'type' => 'password',
-            'content' => isset($user) && empty(old('password')) ? $user->password : old('password')
+            'content' => ''
           ])
 
           <div class="box-footer">
