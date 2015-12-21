@@ -11,12 +11,12 @@
 |
 */
 
-Route::get('/', array('as' => 'home', 'uses' => 'WelcomeController@index'));
-Route::get('/blog', array('as' => 'blog', 'uses' => 'WelcomeController@blog'));
-Route::get('/a-propos', array('as' => 'about', 'uses' => 'WelcomeController@about'));
-Route::get(env('ADMIN_URL', 'admin'), array('as' => 'login', 'uses' => 'Admin\LoginController@login'));
-Route::post(env('ADMIN_URL', 'admin'), array('as' => 'postLogin', 'uses' => 'Admin\LoginController@postLogin'));
-Route::get('/dashboard', array('as' => 'dashboard', 'uses' => 'Admin\DashboardController@index'));
+Route::get('/', ['as' => 'home', 'uses' => 'WelcomeController@index']);
+Route::get('/blog', ['as' => 'blog', 'uses' => 'WelcomeController@blog']);
+Route::get('/a-propos', ['as' => 'about', 'uses' => 'WelcomeController@about']);
+Route::get(env('ADMIN_URL', 'admin'), ['as' => 'login', 'uses' => 'Admin\LoginController@login']);
+Route::post(env('ADMIN_URL', 'admin'), ['as' => 'postLogin', 'uses' => 'Admin\LoginController@postLogin']);
+Route::get('/dashboard', ['as' => 'dashboard', 'uses' => 'Admin\DashboardController@index']);
 
 //post
 Route::resource('admin-posts', 'Admin\Posts\PostsController',
@@ -25,5 +25,8 @@ Route::resource('admin-posts', 'Admin\Posts\PostsController',
 //users
 Route::resource('admin-users', 'Admin\Users\UserController',
     ['except' => 'show']);
+
+//settings
+Route::get('/settings', ['as' => 'admin-settings', 'uses' => 'Admin\Settings\SettingsController@index']);
 
 Route::get('auth/logout', 'Auth\AuthController@getLogout');

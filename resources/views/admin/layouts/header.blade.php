@@ -121,6 +121,11 @@
                 <i class="fa fa-users"></i> <span>Users</span>
               </a>
             </li>
+            <li>
+              <a href="{{ route('admin-settings') }}">
+                <i class="fa fa-gear"></i> <span>Website settings</span>
+              </a>
+            </li>
           </ul>
         </section>
       <!-- /.sidebar -->
