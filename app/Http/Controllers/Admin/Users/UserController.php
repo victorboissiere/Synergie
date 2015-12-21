@@ -67,7 +67,9 @@ class UserController extends Controller
      */
     public function edit($id)
     {
+        $user = User::findOrFail($id);
 
+        return view('admin.users.user_create', compact('user'));
     }
 
     /**
@@ -75,9 +77,15 @@ class UserController extends Controller
      *
      * @param UserRequest $request
      */
-    public function update(UserRequest $request)
+    public function update(UserRequest $request, $id)
     {
+        $user = User::findOrFail($id);
 
+        $user->update($request->all());
+
+        flash('User modified with success!');
+
+        return redirect()->route('admin-users.index');
     }
 
 

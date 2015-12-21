@@ -38,7 +38,7 @@
                   <td>{{ $user->name }}</td>
                   <td>{{ $user->email }}</td>
                   <td>
-                      <a href="#">Modifier</a>
+                      <a href="{{ route('admin-users.edit', $user->id) }}">Modifier</a>
                       //
                       <a href="{{ route('admin-users.destroy', $user->id) }}" class="removeItem" data-id="{{ $user->id }}">Supprimer</a>
                   </td>

@@ -35,7 +35,7 @@
             'label' => 'Email',
             'name' => 'email',
             'type' => 'email',
-            'content' => old('email', isset($email) ? $user->email : '')
+            'content' => old('email', isset($user) ? $user->email : '')
           ])
 
           @include('utilities.forms.input', [
@@ -46,7 +46,7 @@
           ])
 
           <div class="box-footer">
-            <button type="submit" class="btn btn-primary pull-right">{{ isset($post) ? 'Modify' : 'Add' }}</button>
+            <button type="submit" class="btn btn-primary pull-right">{{ isset($user) ? 'Modify' : 'Add' }}</button>
           </div>
           <br><br>
         </div>
