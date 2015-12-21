@@ -10,6 +10,7 @@
 <input type="hidden" name="_method" value="PUT">
 {!! csrf_field() !!}
 @include('utilities.forms.validation')
+@include('utilities.forms.errors')
 <div class="row">
   <div class="col-md-6">
     <div class="box box-primary">
@@ -22,14 +23,14 @@
           'label' => 'Website title',
           'name' => 'website_title',
           'type' => 'text',
-          'content' => $settings['website_title']
+          'content' => old('website_title', $settings['website_title'])
         ])
 
         @include('utilities.forms.input', [
           'label' => 'Admin title',
           'name' => 'admin_title',
           'type' => 'text',
-          'content' => $settings['admin_title']
+          'content' => old('admin_title', $settings['admin_title'])
         ])
 
 
@@ -37,7 +38,7 @@
           'label' => 'Admin email',
           'name' => 'admin_email',
           'type' => 'text',
-          'content' => $settings['admin_email']
+          'content' => old('admin_email', $settings['admin_email'])
         ])
 
         <div class="box-footer">
@@ -58,14 +59,14 @@
           'label' => 'Code header',
           'name' => 'code_header',
           'type' => 'textarea',
-          'content' => $settings['code_header']
+          'content' => old('code_header', $settings['code_header'])
         ])
 
         @include('utilities.forms.input', [
           'label' => 'Code footer',
           'name' => 'code_footer',
           'type' => 'textarea',
-          'content' => $settings['code_footer']
+          'content' => old('code_footer', $settings['code_footer'])
         ])
 
         <div class="box-footer">
@@ -88,7 +89,7 @@
           'label' => 'Website description',
           'name' => 'website_description',
           'type' => 'text',
-          'content' => $settings['website_description']
+          'content' => old('website_description', $settings['website_description'])
         ])
 
         <div class="box-footer">

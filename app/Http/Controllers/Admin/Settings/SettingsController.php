@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Settings;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\Settings\SettingRequest;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -31,8 +32,22 @@ class SettingsController extends Controller
         return view('admin.settings.settings', compact('settings'));
     }
 
-    public function store()
+    public function store(SettingRequest $request)
     {
+        $settings = Setting::find(1);
+
+        //update database using json format
+        $settings->data = [
+          'website_title'       => $request->get('website_title'),
+          'admin_title'         => $request->get('admin_title'),
+          'website_description' => $request->get('website_description'),
+          'admin_email'         => $request->get('admin_email'),
+          'code_header'         => $request->get('code_header'),
+          'code_footer'         => $request->get('code_footer')
+        ];
+
+        $settings->update();
+
         flash('Settings updated with success');
 
         return redirect()->back();
