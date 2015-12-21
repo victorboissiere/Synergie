@@ -9,6 +9,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Setting;
+use Cache;
 
 class SettingsController extends Controller
 {
@@ -34,6 +35,9 @@ class SettingsController extends Controller
 
     public function store(SettingRequest $request)
     {
+        //remove from cache old data to update global website settings
+        Cache::forget('settings');
+
         $settings = Setting::find(1);
 
         //update database using json format
