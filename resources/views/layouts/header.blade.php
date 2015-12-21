@@ -42,7 +42,8 @@
         <nav class="indigo waves-effect waves-light">
             <div class="nav-wrapper">
                 <div class="container">
-                    <a class="brand-logo" href="{{ route('home') }}"><i class="mdi-communication-chat"></i> synergie</a>
+                    <a class="brand-logo" href="{{ route('home') }}">
+                      <i class="mdi-communication-chat"></i> {{ get_global_settings('website_title') }}</a>
                     <ul class="right side-nav" id="nav-mobile">
                         <li>
                             <a href="{{ route('home') }}">Accueil</a>
