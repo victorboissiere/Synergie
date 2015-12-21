@@ -25,7 +25,7 @@
             </div>
           </div>
         </div>
-      </div><!-- /.box-header -->
+      </div>
       <div class="box-body table-responsive no-padding">
         <table class="table table-hover">
           <tr>
@@ -47,8 +47,8 @@
               </tr>
           @endforeach
         </table>
-      </div><!-- /.box-body -->
-    </div><!-- /.box -->
+      </div>
+    </div>
   </div>
 </div>
 {!! $posts->render() !!}
