@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\User;
+use App\Post;
+
 class DashboardController extends Controller
 {
     /**
@@ -22,6 +25,8 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('admin.admin');
+        $nb_users = User::count();
+        $nb_posts = Post::count();
+        return view('admin.admin', compact('nb_users', 'nb_posts'));
     }
 }
