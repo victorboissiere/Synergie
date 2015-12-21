@@ -28,5 +28,6 @@ Route::resource('admin-users', 'Admin\Users\UserController',
 
 //settings
 Route::get('/settings', ['as' => 'admin-settings', 'uses' => 'Admin\Settings\SettingsController@index']);
+Route::put('/settings', ['as' => 'admin-settings', 'uses' => 'Admin\Settings\SettingsController@store']);
 
 Route::get('auth/logout', 'Auth\AuthController@getLogout');

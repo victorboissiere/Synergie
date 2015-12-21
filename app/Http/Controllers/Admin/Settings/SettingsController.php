@@ -30,4 +30,11 @@ class SettingsController extends Controller
 
         return view('admin.settings.settings', compact('settings'));
     }
+
+    public function store()
+    {
+        flash('Settings updated with success');
+
+        return redirect()->back();
+    }
 }

@@ -50,7 +50,7 @@ class PostsController extends Controller
     {
         Post::create($request->all());
 
-        flash('Article ajouté avec succès');
+        flash('Post added with success');
 
         return redirect()->route('admin-posts.index');
     }
@@ -81,7 +81,7 @@ class PostsController extends Controller
 
         $post->update($request->all());
 
-        flash('Article modifié avec succès');
+        flash('Post modified with success');
 
         return redirect()->route('admin-posts.index');
     }
@@ -99,14 +99,14 @@ class PostsController extends Controller
         if (is_null($post))
         {
             return response()->json([
-                'message' => 'Article introuvable'
+                'message' => 'Post not found'
             ], 400);
         }
 
         $post->delete();
 
         return response()->json([
-            'message' => 'Article supprimé avec succès'
+            'message' => 'Post deleted with success'
         ], 200);
     }
 }

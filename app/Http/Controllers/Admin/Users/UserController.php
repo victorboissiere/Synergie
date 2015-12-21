@@ -55,7 +55,7 @@ class UserController extends Controller
     {
         User::create($request->all());
 
-        flash('Utilisateur créé avec succès');
+        flash('User created with success!');
 
         return redirect()->route('admin-users.index');
     }
@@ -94,20 +94,20 @@ class UserController extends Controller
         if (is_null($user))
         {
             return response()->json([
-                'message' => 'Utilisateur introuvable'
+                'message' => 'User not found'
             ], 400);
         }
         else if ($user->id == Auth::id())
         {
             return response()->json([
-                'message' => 'Vous ne pouvez pas vous supprimer'
+                'message' => 'You cannot delete your own account'
             ], 400);
         }
 
         $user->delete();
 
         return response()->json([
-            'message' => 'Utilisateur supprimé avec succès'
+            'message' => 'User deleted with success'
         ], 200);
     }
 }
