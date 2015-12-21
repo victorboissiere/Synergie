@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Setting;
+
 class SettingsController extends Controller
 {
     /**
@@ -18,12 +20,14 @@ class SettingsController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
+     * Fetch settings from database
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('admin.settings.settings');
+        $settings = Setting::find(1)->data;
+
+        return view('admin.settings.settings', compact('settings'));
     }
 }
