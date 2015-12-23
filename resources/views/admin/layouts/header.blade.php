@@ -126,6 +126,11 @@
                 <i class="fa fa-gear"></i> <span>Website settings</span>
               </a>
             </li>
+            <li>
+              <a href="{{ route('home') }}" target="_blank">
+                <i class="fa fa-external-link"></i> <span>Go to website</span>
+              </a>
+            </li>
           </ul>
         </section>
       <!-- /.sidebar -->
