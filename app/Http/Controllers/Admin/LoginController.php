@@ -42,7 +42,7 @@ class LoginController extends Controller
 
         flash('Email or password does not match', 'error');
 
-        return redirect()->back();
+        return redirect()->back()->withInput();
     }
 
 }
