@@ -122,6 +122,11 @@
               </a>
             </li>
             <li>
+              <a href="{{ route('admin-security') }}">
+                <i class="fa fa-lock"></i> <span>Security</span>
+              </a>
+            </li>
+            <li>
               <a href="{{ route('admin-settings') }}">
                 <i class="fa fa-gear"></i> <span>Website settings</span>
               </a>

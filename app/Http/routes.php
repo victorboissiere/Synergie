@@ -26,6 +26,9 @@ Route::resource('admin-posts', 'Admin\Posts\PostsController',
 Route::resource('admin-users', 'Admin\Users\UserController',
     ['except' => 'show']);
 
+//security
+Route::get('/security', ['as' => 'admin-security', 'uses' => 'Admin\Security\SecurityController@index']);
+
 //settings
 Route::get('/settings', ['as' => 'admin-settings', 'uses' => 'Admin\Settings\SettingsController@index']);
 Route::put('/settings', ['as' => 'admin-settings', 'uses' => 'Admin\Settings\SettingsController@store']);
