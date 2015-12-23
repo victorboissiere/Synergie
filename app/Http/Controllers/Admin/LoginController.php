@@ -40,7 +40,8 @@ class LoginController extends Controller
             return redirect()->route('dashboard');
         }
 
-        flash('Email/Mot de passe incorrect', 'error');
+        flash('Email or password does not match', 'error');
+
         return redirect()->back();
     }
 
