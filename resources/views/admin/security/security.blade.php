@@ -11,6 +11,17 @@
     <div class="box">
       <div class="box-header">
         <h3 class="box-title">Logs</h3>
+        <div class="box-tools">
+          <div class="input-group">
+            <div class="input-group-btn">
+              <a class="delete-entries" href="#">
+                <button class="btn btn-sm btn-danger pull-right">
+                  <i class="fa fa-times"></i> Delete all entries
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="box-body table-responsive no-padding">
         <table class="table table-hover">
@@ -22,7 +33,7 @@
             <th>Info</th>
           </tr>
           @foreach ($logs as $log)
-              <tr class="item-{{ $log->id }}">
+              <tr id="item" class="item-{{ $log->id }}">
                   <td>{{ $log->id }}</td>
                   <td>{{ $log->type }}</td>
                   <td>{{ $log->created_at }}</td>
@@ -36,4 +47,7 @@
   </div>
 </div>
 {!! $logs->render() !!}
+@endsection
+@section('scripts')
+  @include('utilities.forms.scripts.security_flush')
 @endsection
