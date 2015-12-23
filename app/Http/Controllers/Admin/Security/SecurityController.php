@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Security;
+
 class SecurityController extends Controller
 {
     /**
@@ -24,6 +26,8 @@ class SecurityController extends Controller
      */
     public function index()
     {
-        return view('admin.security.security');
+        $logs = Security::paginate(30);
+
+        return view('admin.security.security', compact('logs'));
     }
 }

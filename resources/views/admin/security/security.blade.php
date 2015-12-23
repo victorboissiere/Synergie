@@ -21,9 +21,19 @@
             <th>IP</th>
             <th>Info</th>
           </tr>
+          @foreach ($logs as $log)
+              <tr class="item-{{ $log->id }}">
+                  <td>{{ $log->id }}</td>
+                  <td>{{ $log->type }}</td>
+                  <td>{{ $log->created_at }}</td>
+                  <td>{{ $log->ip }}</td>
+                  <td>{{ $log->info }}</td>
+              </tr>
+          @endforeach
         </table>
       </div>
     </div>
   </div>
 </div>
+{!! $logs->render() !!}
 @endsection
