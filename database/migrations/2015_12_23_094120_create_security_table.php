@@ -15,7 +15,7 @@ class CreateSecurityTable extends Migration
         Schema::create('security', function (Blueprint $table) {
             $table->increments('id');
             $table->string('type');
-            $table->string('IP');
+            $table->string('ip');
             $table->string('info');
             $table->timestamps();
         });
