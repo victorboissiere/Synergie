@@ -19,6 +19,7 @@
             <th>type</th>
             <th>date</th>
             <th>IP</th>
+            <th>Info</th>
           </tr>
         </table>
       </div>
