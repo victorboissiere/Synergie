@@ -52,3 +52,8 @@ In order to do so, you can add this quick fix at the top of your virtual host co
 </Directory>
 ```
 This file is usually available in /etc/apache2/sites-enabled/000-default.conf.
+
+You can also enable rewrite mod on Apache using the command below.
+```
+sudo a2enmod rewrite
+```
