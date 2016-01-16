@@ -140,7 +140,7 @@
 
   <script src="{{ asset('frontend-theme/js/jquery.js') }}"></script>
 
-  <script src="{{ asset('fromtend-theme/js/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('frontend-theme/js/bootstrap.min.js') }}"></script>
 
   <script src="{{ asset('frontend-theme/js/clean-blog.min.js') }}"></script>
 

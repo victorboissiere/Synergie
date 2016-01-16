@@ -17,6 +17,7 @@ class CreatePagesTable extends Migration
             $table->increments('id');
             $table->string('title')->unique();
             $table->string('description');
+            $table->string('image');
             $table->text('content');
         });
 
@@ -38,6 +39,6 @@ class CreatePagesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('pages');
     }
 }

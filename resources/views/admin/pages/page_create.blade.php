@@ -13,7 +13,7 @@
   <div class="col-md-6">
     <div class="box box-primary">
       <div class="box-header">
-        <h3 class="box-title">{{ "Modify page " . $page->title }}</h3>
+        <h3 class="box-title">{{ ucfirst($page->title) }}</h3>
       </div>
 
       <form role="form" method="POST" action="{{ route('admin-pages.update', $page->id)}}">
@@ -29,14 +29,21 @@
             'label' => 'Description',
             'name' => 'description',
             'type' => 'text',
-            'content' => old('description', isset($page) ? $page->description : '')
+            'content' => old('description', $page->description)
+          ])
+
+          @include('utilities.forms.input', [
+            'label' => 'Image',
+            'name' => 'image',
+            'type' => 'text',
+            'content' => old('image', $page->image)
           ])
 
           @include('utilities.forms.input', [
             'label' => 'Content',
             'name' => 'content',
             'type' => 'textarea',
-            'content' => old('content', isset($page) ? $page->content : '')
+            'content' => old('content', $page->content)
           ])
 
           <div class="box-footer">

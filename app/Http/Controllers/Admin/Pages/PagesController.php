@@ -61,6 +61,7 @@ class PagesController extends Controller
 
         $page->description = $request->get('description');
         $page->content = $request->get('content');
+        $page->image = $request->get('image');
         $page->save();
 
         flash('Page sucessfully updated');

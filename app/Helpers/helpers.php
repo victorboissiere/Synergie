@@ -28,3 +28,14 @@ function get_global_settings($key)
 
     return $settings[$key];
 }
+
+function get_page_image($url = '')
+{
+    //get default page image
+    if (empty($url))
+    {
+        return asset('frontend-theme/img/home-bg.jpg');
+    }
+
+    return asset($url);
+}
