@@ -42,6 +42,13 @@
           ])
 
           @include('utilities.forms.input', [
+            'label' => 'Image',
+            'name' => 'image',
+            'type' => 'text',
+            'content' => old('image', isset($post) ? $post->image : '')
+          ])
+
+          @include('utilities.forms.input', [
             'label' => 'Content',
             'name' => 'content',
             'type' => 'textarea',

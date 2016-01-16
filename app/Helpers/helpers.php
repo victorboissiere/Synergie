@@ -39,3 +39,15 @@ function get_page_image($url = '')
 
     return asset($url);
 }
+
+
+function get_post_image($url = '')
+{
+    //get default page image
+    if (empty($url))
+    {
+        return asset('frontend-theme/img/post-bg.jpg');
+    }
+
+    return asset($url);
+}
