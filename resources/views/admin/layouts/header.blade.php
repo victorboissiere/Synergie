@@ -117,6 +117,11 @@
               </a>
             </li>
             <li>
+              <a href="{{ route('admin-pages.index') }}">
+                <i class="fa fa-bars"></i> <span>Pages</span>
+              </a>
+            </li>
+            <li>
               <a href="{{ route('admin-users.index') }}">
                 <i class="fa fa-users"></i> <span>Users</span>
               </a>

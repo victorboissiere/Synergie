@@ -5,7 +5,7 @@
         {{ $title }}
       </h3>
       <p>
-        Users
+        {{ $content }}
       </p>
     </div>
     <div class="icon">

@@ -23,6 +23,9 @@ Route::get('dashboard', ['as' => 'dashboard', 'uses' => 'Admin\DashboardControll
 Route::resource('admin-posts', 'Admin\Posts\PostsController',
                 ['except' => 'show']);
 
+Route::resource('admin-pages', 'Admin\Pages\PagesController',
+                ['except' => ['show', 'create', 'store', 'destroy']]);
+
 //users
 Route::resource('admin-users', 'Admin\Users\UserController',
     ['except' => 'show']);

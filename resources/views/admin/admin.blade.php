@@ -21,6 +21,17 @@
   @include('utilities.box.basic_box', [
     'lg' => 3,
     'xs' => 6,
+    'color' => 'aqua',
+    'title' => $nb_posts,
+    'content' => 'Pages',
+    'header_icon' => 'folder',
+    'footer_icon' => 'arrow-circle-right',
+    'text_to_action' => 'Page',
+    'link' => route('admin-posts.index')
+  ])
+  @include('utilities.box.basic_box', [
+    'lg' => 3,
+    'xs' => 6,
     'color' => 'green',
     'title' => $nb_users,
     'content' => 'Users',
