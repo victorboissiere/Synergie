@@ -1,142 +1,151 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width initial-scale=1" name="viewport">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <title>{{ get_global_settings('website_title') }}</title>
-    <meta content="{{ get_global_settings('website_description') }}" name="description">
-    <meta content="width=device-width, initial-scale=0.7, user-scalable=0" name="viewport">
-    <!--Import materialize.css-->
-    <link href="css/materialize.css" media="screen,projection" rel=
-    "stylesheet" type="text/css">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="http://naveenshaji.github.io/material/material//blog/" rel=
-    "canonical">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nicescroll.min.js">
-    </script>
-    <script src="js/jquery.nicescroll.plus.js">
-    </script>
-    <script src="js/velocity.min.js">
-    </script>
-    <!--<script src="js/skrollr.min.js">
-    </script>!-->
-    <script src="js/jquery.scrolline.js">
-    </script>
-    <script src="js/modernizr.js" type="text/javascript">
-    </script>
-    <script src="js/materialize.min.js" type="text/javascript">
-    </script>
-    <script src="js/main.js" type="text/javascript">
-    </script>
-    {!! get_global_settings('code_header') !!}
+<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>{{ get_global_settings('website_title') }}</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="{{ asset('frontend-theme/css/bootstrap.min.css') }}" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="{{ asset('frontend-theme/css/clean-blog.min.css') }}" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  {!! get_global_settings('code_header') !!}
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
 </head>
-<body class="blue-grey lighten-5">
-<header class="site-header">
-    <div class="navbar-fixed">
-        <nav class="indigo waves-effect waves-light">
-            <div class="nav-wrapper">
-                <div class="container">
-                    <a class="brand-logo" href="{{ route('home') }}">
-                      <i class="mdi-communication-chat"></i> {{ get_global_settings('website_title') }}</a>
-                    <ul class="right side-nav" id="nav-mobile">
-                        <li>
-                            <a href="{{ route('home') }}">Accueil</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('blog')}}">Blog</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('about') }}">À propos</a>
-                        </li>
-                        <li>
-                            <a href="http://github.com/victorboissiere/Synergie" target="_blank">GitHub</a>
-                        </li>
-                        @if (env('APP_ENV') == 'development' || !Auth::guest())
-                            <li>
-                                <a href="{{ route('login') }}">Admin</a>
-                            </li>
-                        @endif
-                    </ul>
-                    <a class="button-collapse" data-activates="nav-mobile" href="#"><i class="mdi-navigation-menu"></i></a>
-                </div>
-            </div>
-        </nav>
-    </div>
-</header>
-<a class=
-   "darken-2 scrollToTop btn-floating btn-large waves-effect waves-light cyan"><i
-            class="mdi-hardware-keyboard-arrow-up"></i></a>
 
-<div id="page-wrap">
-    <div id="main-content">
-        <div id="guts">
-            <div class="container">
-                @yield('page')
-            </div>
-        </div>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">{{ get_global_settings('website_title') }}</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="{{ route('home') }}">Accueil</a>
+          </li>
+          <li>
+            <a href="{{ route('blog') }}">Blog</a>
+          </li>
+          <li>
+            <a href="{{ route('about') }}">À propos</a>
+          </li>
+          @if (env('APP_ENV') == 'development' || !Auth::guest())
+            <li>
+              <a href="{{ route('login') }}">ADMIN</a>
+            </li>
+          @endif
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
     </div>
-</div>
-<br>
-<footer class="page-footer blue-grey darken-3">
+    <!-- /.container -->
+  </nav>
+
+  <!-- Page Header -->
+  <!-- Set your background image for this header on the line below. -->
+  <header class="intro-header" style="background-image: url('{{ $image }}')">
     <div class="container">
-        <div class="row">
-            <div class="col l3 m6 s12">
-                <h5 class="white-text">social-links</h5>
-                <ul>
-                    <li>
-                        <a class="grey-text text-lighten-3" href="http://facebook.com/xSF.AzraeL/" target="_blank">
-                            <i class="mdi-social-person-add"></i>
-                            Facebook</a>
-                    </li>
-                    <li>
-                        <a class="grey-text text-lighten-3"
-                           href="https://plus.google.com/u/0/114363400342894379257/posts" target="_blank">
-                            <i class="mdi-social-plus-one"></i>
-                            Google+</a>
-                    </li>
-                    <li>
-                        <a class="grey-text text-lighten-3" href="http://github.com/naveenshaji/" target="_blank">
-                            <i class="mdi-notification-adb"></i>
-                            GitHub</a>
-                    </li>
-                </ul>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          @if ($type == 'post')
+            <div class="post-heading">
+              <h1>{{ $heading }}</h1>
+              <h2 class="subheading">{{ $subheading }}</h2>
+              <span class="meta">{!! $meta !!}</span>
             </div>
-            <div class="col l3 m6 s12">
-                <h5 class="white-text">where-i-live</h5>
-
-                <p class="grey-text text-lighten-4">TC 11/1827<br>
-                    West Cliff Gardens 35<br>
-                    Kowdiar, Trivandrum<br>
-                    &nbsp;</p>
+          @else
+            <div class="site-heading">
+              <h1>{{ $heading }}</h1>
+              <hr class="small">
+              <span class="subheading">{{ $subheading }}</span>
             </div>
-            <div class="col l3 m6 s12">
-                <h5 class="white-text">Contact</h5>
-
-                <p class="grey-text text-lighten-4">+91-9496-74-7070<br>
-                    contact@tivbroc.com<br>
-                    contact@canan.training</p>
-            </div>
-            <div class="col l3 m6 s12">
-                <h5 class="white-text">naveenshaji</h5>
-
-                <p class="grey-text text-lighten-4">Converting caffeine to
-                    code since 1997. I love web design. xoxo.</p>
-            </div>
+          @endif
         </div>
+      </div>
     </div>
-    <div class="footer-copyright">
-        <div class="container">
-            © {{ date("Y") }} Synergie <a class="grey-text text-lighten-4 right" href="http://epita.fr/"
-                                          target="_blank">EPITA</a>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    @yield('page')
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <ul class="list-inline text-center">
+            <li>
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; Synergie</p>
         </div>
+      </div>
     </div>
-</footer>
-{!! get_global_settings('code_footer') !!}
+  </footer>
+
+  <script src="{{ asset('frontend-theme/js/jquery.js') }}"></script>
+
+  <script src="{{ asset('fromtend-theme/js/bootstrap.min.js') }}"></script>
+
+  <script src="{{ asset('frontend-theme/js/clean-blog.min.js') }}"></script>
+
+
+  {!! get_global_settings('code_footer') !!}
 </body>
+
 </html>

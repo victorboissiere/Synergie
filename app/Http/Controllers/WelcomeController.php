@@ -31,4 +31,11 @@ class WelcomeController extends Controller
     {
         return view('about');
     }
+
+    public function show_simple_post($id)
+    {
+        $post = Post::findOrFail($id);
+
+        return view('simple_post', compact('post'));
+    }
 }

@@ -12,11 +12,12 @@
 */
 
 Route::get('/', ['as' => 'home', 'uses' => 'WelcomeController@index']);
-Route::get('/blog', ['as' => 'blog', 'uses' => 'WelcomeController@blog']);
-Route::get('/a-propos', ['as' => 'about', 'uses' => 'WelcomeController@about']);
+Route::get('blog', ['as' => 'blog', 'uses' => 'WelcomeController@blog']);
+Route::get('blog/post/{id}', ['as' => 'simple_post', 'uses' => 'WelcomeController@show_simple_post']);
+Route::get('a-propos', ['as' => 'about', 'uses' => 'WelcomeController@about']);
 Route::get(env('ADMIN_URL', 'admin'), ['as' => 'login', 'uses' => 'Admin\LoginController@login']);
 Route::post(env('ADMIN_URL', 'admin'), ['as' => 'postLogin', 'uses' => 'Admin\LoginController@postLogin']);
-Route::get('/dashboard', ['as' => 'dashboard', 'uses' => 'Admin\DashboardController@index']);
+Route::get('dashboard', ['as' => 'dashboard', 'uses' => 'Admin\DashboardController@index']);
 
 //post
 Route::resource('admin-posts', 'Admin\Posts\PostsController',
