@@ -8,7 +8,7 @@
         {{ str_limit($posts[$i]->description, 256)}}
       </h3>
     </a>
-    <p class="post-meta">Publié le {{ $posts[$i]->created_at->format('d F Y') }}</p>
+    <p class="post-meta">Publié le {{ get_post_date($posts[$i]->created_at) }}</p>
   </div>
   {!! $i == count($end) ? '' : '<hr>' !!}
 @endfor

@@ -51,3 +51,10 @@ function get_post_image($url = '')
 
     return asset($url);
 }
+
+function get_post_date($date)
+{
+    //make sure to add fr_FR local. (locale -a to see currently installed)
+    setlocale(LC_TIME, "fr_FR");
+    return strftime("%e %B %Y", strtotime($date));
+}

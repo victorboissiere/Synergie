@@ -2,7 +2,7 @@
   'type'        => 'post',
   'heading'     => $post->title,
   'subheading'  => $post->description,
-  'meta'        => 'Publié le ' . $post->created_at->format('d F Y'),
+  'meta'        => 'Publié le ' . get_post_date($post->created_at),
   'image'       => get_post_image($post->image)
 ])
 
