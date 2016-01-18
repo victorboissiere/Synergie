@@ -2,10 +2,13 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
+//base url without last /
+
+$baseurl = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && ! in_array(strtolower($_SERVER['HTTPS']), array( 'off', 'no' ))) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'];
 //Add security layer to check if user is admin
 $opts = array('http' => array('header'=> 'Cookie: ' . $_SERVER['HTTP_COOKIE']."\r\n"));
 $context = stream_context_create($opts);
-$json = json_decode(file_get_contents('http://localhost/checkauth', false, $context), true);
+$json = json_decode(file_get_contents($baseurl . '/checkauth', false, $context), true);
 if (!isset($json['guest']) || $json['guest'])
 {
 	echo 'Error. Not logged';
@@ -69,7 +72,7 @@ $config = array(
 	|
 	*/
 
-	'base_url' => ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] && ! in_array(strtolower($_SERVER['HTTPS']), array( 'off', 'no' ))) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'],
+	'base_url' => $baseurl,
 
 	/*
 	|--------------------------------------------------------------------------

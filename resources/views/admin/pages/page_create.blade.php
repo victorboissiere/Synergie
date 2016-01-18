@@ -41,7 +41,7 @@
 
           @include('utilities.forms.input', [
             'label' => 'Content',
-            'name' => 'content',
+            'name' => 'ckeditor',
             'type' => 'textarea',
             'content' => old('content', $page->content)
           ])
@@ -61,10 +61,10 @@
   <script src="{{ asset('admin-theme/js/plugins/ckeditor/ckeditor.js') }}" type="text/javascript"></script>
   <script>
   $(function() {
-    CKEDITOR.replace( 'content' ,{
+    CKEDITOR.replace( 'ckeditor' ,{
 	       filebrowserBrowseUrl : '{{ asset("filemanager/filemanager/dialog.php?type=2&editor=ckeditor&fldr=") }}',
 	       filebrowserUploadUrl : '{{ asset("filemanager/filemanager/dialog.php?type=2&editor=ckeditor&fldr=") }}',
-	       filebrowserImageBrowseUrl : '{{ asset("filemanager/filemanager/dialog.php?type=1&editor=ckeditor&fldr=") }}'
+	       filebrowserImageBrowseUrl : '{{ asset("filemanager/filemanager/dialog.php?type=2&editor=ckeditor&fldr=/&popup=1") }}'
     });
   });
   </script>
