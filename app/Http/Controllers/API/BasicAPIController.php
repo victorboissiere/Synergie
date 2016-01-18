@@ -19,8 +19,7 @@ class BasicAPIController extends Controller
     public function checkauth()
     {
         return response()->json([
-          'guest' => Auth::guest(),
-          'sessionid' => Session::getId()
+          'guest' => Auth::guest()
         ]);
     }
 
