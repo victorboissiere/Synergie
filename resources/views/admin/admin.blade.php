@@ -22,12 +22,12 @@
     'lg' => 3,
     'xs' => 6,
     'color' => 'aqua',
-    'title' => $nb_posts,
+    'title' => $nb_pages,
     'content' => 'Pages',
     'header_icon' => 'folder',
     'footer_icon' => 'arrow-circle-right',
     'text_to_action' => 'Page',
-    'link' => route('admin-posts.index')
+    'link' => route('admin-pages.index')
   ])
   @include('utilities.box.basic_box', [
     'lg' => 3,

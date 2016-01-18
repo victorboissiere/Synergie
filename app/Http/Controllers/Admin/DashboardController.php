@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 
 use App\User;
 use App\Post;
+use App\Page;
 
 class DashboardController extends Controller
 {
@@ -27,7 +28,8 @@ class DashboardController extends Controller
     {
         $nb_users = User::count();
         $nb_posts = Post::count();
-        return view('admin.admin', compact('nb_users', 'nb_posts'));
+        $nb_pages = Page::count();
+        return view('admin.admin', compact('nb_users', 'nb_posts', 'nb_pages'));
     }
 
 }
