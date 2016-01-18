@@ -25,7 +25,8 @@ class PageRequest extends Request
     {
         return [
             'description' => 'required|max:255|min:2',
-            'content' => 'required'
+            'image'       =>  'file_exists:' . env('UPLOAD_DIR', 'img'),
+            'content'     => 'required'
         ];
     }
 }

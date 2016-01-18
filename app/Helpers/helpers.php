@@ -31,25 +31,29 @@ function get_global_settings($key)
 
 function get_page_image($url = '')
 {
+    $default_dir = env('UPLOAD_DIR', 'img');
+
     //get default page image
     if (empty($url))
     {
-        return asset('img/basic/home-bg.jpg');
+        return asset($default_dir . '/basic/home-bg.jpg');
     }
 
-    return asset('img/' . $url);
+    return asset($default_dir . '/' . $url);
 }
 
 
 function get_post_image($url = '')
 {
+    $default_dir = env('UPLOAD_DIR', 'img');
+
     //get default page image
     if (empty($url))
     {
-        return asset('img/basic/post-bg.jpg');
+        return asset($default_dir . '/basic/post-bg.jpg');
     }
 
-    return asset('img/' . $url);
+    return asset($default_dir . '/' . $url);
 }
 
 function get_post_date($date)
