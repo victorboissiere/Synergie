@@ -18,6 +18,7 @@ Route::get('a-propos', ['as' => 'about', 'uses' => 'WelcomeController@about']);
 Route::get(env('ADMIN_URL', 'admin'), ['as' => 'login', 'uses' => 'Admin\LoginController@login']);
 Route::post(env('ADMIN_URL', 'admin'), ['as' => 'postLogin', 'uses' => 'Admin\LoginController@postLogin']);
 Route::get('dashboard', ['as' => 'dashboard', 'uses' => 'Admin\DashboardController@index']);
+Route::get('manager', ['as' => 'filemanager', 'uses' => 'Admin\DashboardController@filemanager']);
 
 //post
 Route::resource('admin-posts', 'Admin\Posts\PostsController',

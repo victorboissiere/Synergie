@@ -2,7 +2,7 @@
   'type'        => 'page',
   'heading'     => 'Blog',
   'subheading'  => 'Actualités',
-  'image'       => 'frontend-theme/img/home-bg.jpg'
+  'image'       => get_page_image('basic/home-bg.jpg')
 ])
 
 @section('page')

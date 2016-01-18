@@ -122,6 +122,11 @@
               </a>
             </li>
             <li>
+              <a href="{{ route('filemanager') }}">
+                <i class="fa fa-upload"></i> <span>File manager</span>
+              </a>
+            </li>
+            <li>
               <a href="{{ route('admin-users.index') }}">
                 <i class="fa fa-users"></i> <span>Users</span>
               </a>

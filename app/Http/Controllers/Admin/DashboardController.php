@@ -29,4 +29,9 @@ class DashboardController extends Controller
         $nb_posts = Post::count();
         return view('admin.admin', compact('nb_users', 'nb_posts'));
     }
+
+    public function filemanager()
+    {
+        return view('admin.filemanager');
+    }
 }

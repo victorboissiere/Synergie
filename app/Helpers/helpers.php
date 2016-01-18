@@ -34,10 +34,10 @@ function get_page_image($url = '')
     //get default page image
     if (empty($url))
     {
-        return asset('frontend-theme/img/home-bg.jpg');
+        return asset('img/basic/home-bg.jpg');
     }
 
-    return asset($url);
+    return asset('img/' . $url);
 }
 
 
@@ -46,10 +46,10 @@ function get_post_image($url = '')
     //get default page image
     if (empty($url))
     {
-        return asset('frontend-theme/img/post-bg.jpg');
+        return asset('img/basic/post-bg.jpg');
     }
 
-    return asset($url);
+    return asset('img/' . $url);
 }
 
 function get_post_date($date)
