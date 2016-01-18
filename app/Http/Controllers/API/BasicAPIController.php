@@ -19,7 +19,8 @@ class BasicAPIController extends Controller
     public function checkauth()
     {
         return response()->json([
-          'guest' => Auth::guest()
+          'guest' => Auth::guest(), // check if user logged in
+          'dir'   => env('UPLOAD_DIR', 'files') //upload dir for file manager
         ]);
     }
 

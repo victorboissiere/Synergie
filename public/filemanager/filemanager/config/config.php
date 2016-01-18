@@ -14,7 +14,7 @@ if (!isset($_SERVER['HTTP_COOKIE']))
 $opts = array('http' => array('header'=> 'Cookie: ' . $_SERVER['HTTP_COOKIE']."\r\n"));
 $context = stream_context_create($opts);
 $json = json_decode(file_get_contents($baseurl . '/checkauth', false, $context), true);
-if (!isset($json['guest']) || $json['guest'])
+if (!isset($json['guest']) || !isset($json['dir']) || $json['guest'])
 {
 	echo 'Error. Not logged';
 	exit();
@@ -87,7 +87,7 @@ $config = array(
 	| with start and final /
 	|
 	*/
-	'upload_dir' => '/img/',
+	'upload_dir' => '/' . $json['dir'] . '/',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -97,7 +97,7 @@ $config = array(
 	| with final /
 	|
 	*/
-	'current_path' => '../../img/',
+	'current_path' => '../../' . $json['dir'] .'/',
 
 	/*
 	|--------------------------------------------------------------------------
