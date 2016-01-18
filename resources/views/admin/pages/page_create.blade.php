@@ -64,7 +64,7 @@
     CKEDITOR.replace( 'ckeditor' ,{
 	       filebrowserBrowseUrl : '{{ asset("filemanager/filemanager/dialog.php?type=2&editor=ckeditor&fldr=") }}',
 	       filebrowserUploadUrl : '{{ asset("filemanager/filemanager/dialog.php?type=2&editor=ckeditor&fldr=") }}',
-	       filebrowserImageBrowseUrl : '{{ asset("filemanager/filemanager/dialog.php?type=2&editor=ckeditor&fldr=/&popup=1") }}'
+	       filebrowserImageBrowseUrl : '{{ asset("filemanager/filemanager/dialog.php?type=2&editor=ckeditor&fldr=") }}'
     });
   });
   </script>
