@@ -24,9 +24,10 @@ class PostRequest extends Request
     public function rules()
     {
         return [
-            'title' => 'required|max:255|min:2',
+            'title'       => 'required|max:255|min:2',
             'description' => 'required|max:180|min:30',//for the meta tag to be indexed by search engines
-            'content' => 'required'
+            'image'       => 'file_exists:' . env('UPLOAD_DIR', 'img'), 
+            'content'     => 'required'
         ];
     }
 }
