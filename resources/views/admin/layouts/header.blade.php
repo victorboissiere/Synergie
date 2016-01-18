@@ -122,7 +122,7 @@
               </a>
             </li>
             <li>
-              <a href="{{ route('filemanager') }}">
+              <a href="{{ asset('filemanager/filemanager/dialog.php?type=0') }}" target="_blank">
                 <i class="fa fa-upload"></i> <span>File manager</span>
               </a>
             </li>

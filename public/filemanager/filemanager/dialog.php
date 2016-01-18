@@ -190,8 +190,8 @@ if (isset($_GET["descending"]))
 	$descending = $_SESSION['RF']['descending'] = fix_get_params($_GET["descending"])==1;
 }
 else{
-	$descending = $_SESSION['RF']['descending'];	
-} 
+	$descending = $_SESSION['RF']['descending'];
+}
 
 $boolarray = Array(false => 'false', true => 'true');
 
@@ -297,7 +297,7 @@ $get_params = http_build_query($get_params);
 		    url: "upload.php",
 		    <?php if($apply!="apply_none"){ ?>
 		    init: function() {
-			    this.on("success", function(file,res) { 
+			    this.on("success", function(file,res) {
 			    	file.previewElement.addEventListener("click", function() {
 						<?php echo $apply; ?>(res,'<?php echo $field_id; ?>');
 					});
@@ -447,7 +447,7 @@ $get_params = http_build_query($get_params);
 				    </div>
 				</form>
 				<div class="upload-help"><?php echo trans('Upload_base_help'); ?></div>
-		    
+
 			<?php if($java_upload){ ?>
 			</div>
 			<div class="tab-pane" id="tab2">

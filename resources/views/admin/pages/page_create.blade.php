@@ -59,9 +59,13 @@
 @endsection
 @section('scripts')
   <script src="{{ asset('admin-theme/js/plugins/ckeditor/ckeditor.js') }}" type="text/javascript"></script>
-  <script type="text/javascript">
-    $(function() {
-      CKEDITOR.replace('content');
+  <script>
+  $(function() {
+    CKEDITOR.replace( 'content' ,{
+	       filebrowserBrowseUrl : '{{ asset("filemanager/filemanager/dialog.php?type=2&editor=ckeditor&fldr=") }}',
+	       filebrowserUploadUrl : '{{ asset("filemanager/filemanager/dialog.php?type=2&editor=ckeditor&fldr=") }}',
+	       filebrowserImageBrowseUrl : '{{ asset("filemanager/filemanager/dialog.php?type=1&editor=ckeditor&fldr=") }}'
     });
+  });
   </script>
 @endsection

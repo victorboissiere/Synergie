@@ -30,8 +30,4 @@ class DashboardController extends Controller
         return view('admin.admin', compact('nb_users', 'nb_posts'));
     }
 
-    public function filemanager()
-    {
-        return view('admin.filemanager');
-    }
 }

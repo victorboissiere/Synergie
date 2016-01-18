@@ -1,5 +1,19 @@
 <?php
-session_start();
+error_reporting(E_ALL);
+ini_set('display_errors', 'on');
+
+//Add security layer to check if user is admin
+$opts = array('http' => array('header'=> 'Cookie: ' . $_SERVER['HTTP_COOKIE']."\r\n"));
+$context = stream_context_create($opts);
+$json = json_decode(file_get_contents('http://localhost/checkauth', false, $context), true);
+if (!isset($json['guest']) || $json['guest'])
+{
+	echo 'Error. Not logged';
+	exit();
+}
+
+
+//session_start();
 mb_internal_encoding('UTF-8');
 date_default_timezone_set('Europe/Rome');
 /*
