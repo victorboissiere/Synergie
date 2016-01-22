@@ -9,6 +9,7 @@
 {!! csrf_field() !!}
 <div class="row">
   <div class="col-xs-12">
+    @include('utilities.forms.validation')
     <div class="box">
       <div class="box-header">
         <h3 class="box-title">User list</h3>

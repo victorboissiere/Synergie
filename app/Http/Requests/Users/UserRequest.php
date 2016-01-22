@@ -23,12 +23,12 @@ class UserRequest extends Request
      */
     public function rules()
     {
-        $should_be_unique = $this->route()->getName() != "admin-users.update";
+        $new_user = $this->route()->getName() != "admin-users.update";
 
         return [
             'name' => 'required|max:50|min:2',
-            'email' => 'required' . ($should_be_unique ? '|unique:users' : ''),
-            'password' => 'required|min:2'
+            'email' => 'required' . ($new_user ? '|unique:users' : ''),
+            'password' => ($new_user ? 'required|' : '') . 'min:2'
         ];
     }
 }
