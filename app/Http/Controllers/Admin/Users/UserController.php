@@ -81,7 +81,12 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
 
-        $user->update($request->all());
+        $password = $request->get('password');
+
+        //get password only if the user has updated the password (not blank)
+        $data = !empty($password) ? $request->all() : $request->except('password');
+
+        $user->update($data);
 
         flash('User modified with success!');
 
