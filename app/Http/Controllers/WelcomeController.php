@@ -46,4 +46,9 @@ class WelcomeController extends Controller
 
         return view('simple_post', compact('post'));
     }
+
+    public function testimonials()
+    {
+        return view('testimonials');
+    }
 }

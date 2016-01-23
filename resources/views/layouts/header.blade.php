@@ -56,6 +56,9 @@
             <a href="{{ route('blog') }}">Blog</a>
           </li>
           <li>
+            <a href="{{ route('testimonials') }}">Témoignages</a>
+          </li>
+          <li>
             <a href="{{ route('about') }}">À propos</a>
           </li>
           @if (env('APP_ENV') == 'development' || !Auth::guest())
