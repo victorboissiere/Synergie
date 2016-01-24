@@ -4,6 +4,9 @@
   'subheading'  => 'Partagez vos expériences',
   'image'       => get_page_image()
 ])
+@section('head')
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+@endsection
 
 @section('page')
 @if (Session::has('message'))
@@ -40,6 +43,7 @@
               'content' => old('content', '')
             ])
           </div>
+          <div class="g-recaptcha" data-sitekey="6LcuQBYTAAAAAH8MIAomGwbr3etLDLWrqDUVvyoC"></div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
@@ -51,7 +55,7 @@
 </div>
 @endsection
 @section('scripts')
-  @if (count($errors) > 0)
+  @if (count($errors) > 0 || Session::has('error'))
     <script>
       $('#add-testimonial-box').modal('show');
     </script>

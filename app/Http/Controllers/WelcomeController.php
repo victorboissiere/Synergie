@@ -55,6 +55,33 @@ class WelcomeController extends Controller
 
     public function addTestimonial(TestimonialRequest $request)
     {
+        // Google recaptcha settings
+        $url = 'https://www.google.com/recaptcha/api/siteverify';
+        $data = [
+            'secret'   => env('GOOGLE_CAPTCHA_SECRET', ''),
+            'response' => $request->get('g-recaptcha-response')
+        ];
+
+        // send data to Google Recaptcha.
+        $options = [
+            'http' => [
+                'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+                'method'  => 'POST',
+                'content' => http_build_query($data),
+            ],
+        ];
+
+        $context  = stream_context_create($options);
+        $response = json_decode(file_get_contents($url, false, $context), true);
+
+        //verify google catpcha is valid
+        if (!isset($response['success']) || !$response['success'])
+        {
+            flash('CAPTCHA non valide', 'error');
+
+            return redirect()->back()->withInput();
+        }
+
         flash('Votre témoigagne a bien été envoyé.');
 
         return redirect()->back();
