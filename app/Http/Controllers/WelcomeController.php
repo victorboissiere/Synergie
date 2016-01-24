@@ -52,7 +52,9 @@ class WelcomeController extends Controller
 
     public function testimonials()
     {
-        return view('testimonials');
+        $testimonials = Testimonial::where('status', 'published')->paginate(15);
+
+        return view('testimonials', compact('testimonials'));
     }
 
     public function addTestimonial(TestimonialRequest $request)

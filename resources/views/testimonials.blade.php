@@ -12,6 +12,11 @@
 @if (Session::has('message'))
   @include('utilities.forms.validation')
 @endif
+
+@foreach($testimonials as $testimonial)
+  {{ $testimonial->content }}
+  <br>
+@endforeach
 <ul class="pager">
   <li class="next">
     <a href="#" style="float:none" data-toggle="modal" data-target="#add-testimonial-box">Ajouter votre témoignage</a>
