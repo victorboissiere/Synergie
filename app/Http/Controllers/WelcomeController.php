@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use App\Page;
+use App\Testimonial;
+
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
@@ -81,6 +83,12 @@ class WelcomeController extends Controller
 
             return redirect()->back()->withInput();
         }
+
+        Testimonial::create([
+            'ip'      => $_SERVER['REMOTE_ADDR'],
+            'content' => $request->get('content'),
+            'status'  => 'waiting'
+        ]);
 
         flash('Votre témoigagne a bien été envoyé.');
 

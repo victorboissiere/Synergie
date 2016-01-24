@@ -17,6 +17,7 @@ class CreateTestimonialsTable extends Migration
             $table->text('content');
             $table->string('ip');
             $table->enum('status', ['published', 'waiting']);
+            $table->timestamps();
         });
     }
 
