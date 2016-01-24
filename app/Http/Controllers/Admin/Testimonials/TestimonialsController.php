@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Testimonial;
+use App\Http\Requests\Testimonials\TestimonialRequest;
 
 class TestimonialsController extends Controller
 {
@@ -31,7 +32,7 @@ class TestimonialsController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.testimonials.testimonial_create');
     }
 
     /**
@@ -40,20 +41,17 @@ class TestimonialsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TestimonialRequest $request)
     {
-        //
-    }
+        Testimonial::create([
+            'content' => $request->get('content'),
+            'ip'      => $_SERVER['REMOTE_ADDR'],
+            'status'  => 'published'
+        ]);
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        flash('Testimonial added with sucessfully');
+
+        return redirect()->route('admin-testimonials.index');
     }
 
     /**
@@ -64,7 +62,9 @@ class TestimonialsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $testimonial = Testimonial::findOrFail($id);
+
+        return view('admin.testimonials.testimonial_create', compact('testimonial'));
     }
 
     /**
@@ -74,9 +74,15 @@ class TestimonialsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(TestimonialRequest $request, $id)
     {
-        //
+        $testimonial = Testimonial::findOrFail($id);
+
+        $testimonial->update($request->all());
+
+        flash('Testimonial updated');
+
+        return redirect()->route('admin-testimonials.index');
     }
 
     /**
@@ -87,6 +93,57 @@ class TestimonialsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $testimonial = Testimonial::find($id);
+
+        if (is_null($testimonial))
+        {
+            return response()->json([
+               'message' => 'Testimonial not found'
+            ], 400);
+        }
+
+        $testimonial->delete();
+
+        return response()->json([
+           'message' => 'Testimonial deleted'
+        ], 200);
+    }
+
+    /**
+     * Change testimonial status to waiting
+     */
+    public function waiting($id)
+    {
+        $this->update_status($id, 'waiting');
+    }
+
+    /**
+     * Change testimonial status to published
+     */
+    public function publish($id)
+    {
+        $this->update_status($id, 'published');
+    }
+
+    /**
+     * Return json response to ajax request and change the status of the testimonial
+     */
+    private function update_status($id, $new_status)
+    {
+        $testimonial = Testimonial::find($id);
+
+        if (is_null($testimonial))
+        {
+            return response()->json([
+               'message' => 'Testimonial not found'
+            ], 400);
+        }
+
+        $testimonial->status = $new_status;
+        $testimonial->save();
+
+        return response()->json([
+           'message' => 'Status updated with success'
+        ], 200);
     }
 }

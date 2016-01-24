@@ -33,6 +33,11 @@ Route::resource('admin-pages', 'Admin\Pages\PagesController',
 
 Route::resource('admin-testimonials', 'Admin\Testimonials\TestimonialsController',
                 ['except' => 'show']);
+
+//routes used for ajax. Modify testimonial status
+Route::post('testimonials/publish/{id}', ['as' => 'testimonial-publish', 'uses' => 'Admin\Testimonials\TestimonialsController@publish']);
+Route::post('testimonials/waiting/{id}', ['as' => 'testimonial-waiting', 'uses' => 'Admin\Testimonials\TestimonialsController@waiting']);
+
 //users
 Route::resource('admin-users', 'Admin\Users\UserController',
     ['except' => 'show']);
