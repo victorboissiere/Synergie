@@ -149,6 +149,8 @@
 
 
   {!! get_global_settings('code_footer') !!}
+
+  @yield('scripts')
 </body>
 
 </html>

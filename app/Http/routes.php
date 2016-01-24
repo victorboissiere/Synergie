@@ -14,6 +14,7 @@
 Route::get('/', ['as' => 'home', 'uses' => 'WelcomeController@index']);
 Route::get('blog', ['as' => 'blog', 'uses' => 'WelcomeController@blog']);
 Route::get('testimonials', ['as' => 'testimonials', 'uses' => 'WelcomeController@testimonials']);
+Route::post('testimonials', ['as' => 'add-testimonial', 'uses' => 'WelcomeController@addTestimonial']);
 Route::get('blog/post/{id}', ['as' => 'simple_post', 'uses' => 'WelcomeController@show_simple_post']);
 Route::get('a-propos', ['as' => 'about', 'uses' => 'WelcomeController@about']);
 Route::get(env('ADMIN_URL', 'admin'), ['as' => 'login', 'uses' => 'Admin\LoginController@login']);

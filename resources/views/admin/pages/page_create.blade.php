@@ -26,23 +26,23 @@
         <div class="box-body">
 
           @include('utilities.forms.input', [
-            'label' => 'Description',
-            'name' => 'description',
-            'type' => 'text',
+            'label'   => 'Description',
+            'name'    => 'description',
+            'type'    => 'text',
             'content' => old('description', $page->description)
           ])
 
           @include('utilities.forms.input', [
-            'label' => 'Image',
-            'name' => 'image',
-            'type' => 'text',
+            'label'   => 'Image',
+            'name'    => 'image',
+            'type'    => 'text',
             'content' => old('image', $page->image)
           ])
 
           @include('utilities.forms.input', [
-            'label' => 'Content',
-            'name' => 'content',
-            'type' => 'textarea',
+            'label'   => 'Content',
+            'name'    => 'content',
+            'type'    => 'textarea',
             'content' => old('content', $page->content)
           ])
 

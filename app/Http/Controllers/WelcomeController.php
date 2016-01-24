@@ -8,6 +8,7 @@ use App\Page;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Testimonials\TestimonialRequest;
 
 class WelcomeController extends Controller
 {
@@ -50,5 +51,12 @@ class WelcomeController extends Controller
     public function testimonials()
     {
         return view('testimonials');
+    }
+
+    public function addTestimonial(TestimonialRequest $request)
+    {
+        flash('Votre témoigagne a bien été envoyé.');
+
+        return redirect()->back();
     }
 }
