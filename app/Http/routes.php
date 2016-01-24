@@ -31,6 +31,8 @@ Route::resource('admin-posts', 'Admin\Posts\PostsController',
 Route::resource('admin-pages', 'Admin\Pages\PagesController',
                 ['except' => ['show', 'create', 'store', 'destroy']]);
 
+Route::resource('admin-testimonials', 'Admin\Testimonials\TestimonialsController',
+                ['except' => 'show']);
 //users
 Route::resource('admin-users', 'Admin\Users\UserController',
     ['except' => 'show']);
