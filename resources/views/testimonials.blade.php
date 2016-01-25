@@ -51,6 +51,9 @@
   </div>
   <br>
 @endforeach
+<div class="text-center">
+  {!! $testimonials->render() !!}
+</div>
 <ul class="pager">
   <li class="next">
     <a href="#" style="float:none" data-toggle="modal" data-target="#add-testimonial-box">Ajouter votre témoignage</a>
