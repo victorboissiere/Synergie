@@ -62,3 +62,16 @@ function get_post_date($date)
     setlocale(LC_TIME, "fr_FR");
     return strftime("%e %B %Y", strtotime($date));
 }
+
+/**
+ *
+ */
+function admin_header_active($name)
+{
+    if (Route::getCurrentRoute()->getName() == $name)
+    {
+        return 'active';
+    }
+
+    return '';
+}

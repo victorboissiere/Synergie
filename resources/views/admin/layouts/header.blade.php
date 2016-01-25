@@ -106,22 +106,22 @@
           <!-- /.search form -->
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
-            <li class="active">
+            <li class="{{ admin_header_active('dashboard') }}">
               <a href="{{ route('dashboard') }}">
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
               </a>
             </li>
-            <li>
+            <li class="{{ admin_header_active('admin-posts.index') }}">
               <a href="{{ route('admin-posts.index') }}">
                 <i class="fa fa-th-list"></i> <span>Posts</span>
               </a>
             </li>
-            <li>
+            <li class="{{ admin_header_active('admin-pages.index') }}">
               <a href="{{ route('admin-pages.index') }}">
                 <i class="fa fa-bars"></i> <span>Pages</span>
               </a>
             </li>
-            <li>
+            <li class="{{ admin_header_active('admin-testimonials.index') }}">
               <a href="{{ route('admin-testimonials.index') }}">
                 <i class="fa fa-comments"></i> <span>Testimonials</span>
               </a>
@@ -131,17 +131,17 @@
                 <i class="fa fa-upload"></i> <span>File manager</span>
               </a>
             </li>
-            <li>
+            <li class="{{ admin_header_active('admin-users.index') }}">
               <a href="{{ route('admin-users.index') }}">
                 <i class="fa fa-users"></i> <span>Users</span>
               </a>
             </li>
-            <li>
+            <li class="{{ admin_header_active('admin-security') }}">
               <a href="{{ route('admin-security') }}">
                 <i class="fa fa-lock"></i> <span>Security</span>
               </a>
             </li>
-            <li>
+            <li class="{{ admin_header_active('admin-settings') }}">
               <a href="{{ route('admin-settings') }}">
                 <i class="fa fa-gear"></i> <span>Website settings</span>
               </a>
