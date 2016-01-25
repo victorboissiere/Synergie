@@ -59,17 +59,6 @@
     <div class="box">
       <div class="box-header">
         <h3 class="box-title">Testimonials waiting approval</h3>
-        <div class="box-tools">
-          <div class="input-group">
-            <div class="input-group-btn">
-              <a href="{{ route('admin-testimonials.create') }}">
-                <button class="btn btn-sm btn-default pull-right">
-                  <i class="fa fa-plus"></i> Add testimonial
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
       <div class="box-body table-responsive no-padding">
         <table class="table table-hover" id="waiting-items">
