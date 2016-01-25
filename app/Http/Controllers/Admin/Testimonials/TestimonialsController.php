@@ -12,6 +12,15 @@ use App\Http\Requests\Testimonials\TestimonialRequest;
 
 class TestimonialsController extends Controller
 {
+
+    /**
+    * Do not allow guest user to access methods in this class
+    */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
