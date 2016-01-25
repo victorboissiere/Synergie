@@ -6,6 +6,21 @@
 ])
 @section('head')
   <script src='https://www.google.com/recaptcha/api.js'></script>
+  <!-- TODO : move into own css when it is done !-->
+  <style>
+    .custom-testimonial{
+      padding: 10px 15px !important;
+      font-size: 10px !important;
+      //border-radius: 0 !important;
+      border-top-left-radius: 15px !important;
+      border-top-right-radius: 15px !important;
+      border-bottom-right-radius: 15px !important;
+      border-bottom-left-radius: 15px !important;
+      font-weight: normal !important;
+      margin-right: 10px;
+      margin-top: -20px;
+    }
+  </style>
 @endsection
 
 @section('page')
@@ -14,7 +29,26 @@
 @endif
 
 @foreach($testimonials as $testimonial)
-  {{ $testimonial->content }}
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-sm-8 col-xs-12">
+          {{ $testimonial->content }}
+          <div class="visible-xs">
+            <br>
+          </div>
+        </div>
+        <div class="col-sm-4 col-xs-12">
+          <ul class="pager">
+            <li class="next">
+              <a href="#" class="custom-testimonial">Intéressant</a>
+              <a href="#" class="custom-testimonial">Drôle</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
   <br>
 @endforeach
 <ul class="pager">
