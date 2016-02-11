@@ -10,6 +10,3 @@
         <strong>Error!</strong> {{ Session::get('error') }}
     </div>
 @endif
-@if(!isset($space) || $space)
-  <br>
-@endif

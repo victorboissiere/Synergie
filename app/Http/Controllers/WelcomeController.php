@@ -96,4 +96,9 @@ class WelcomeController extends Controller
 
         return redirect()->back();
     }
+
+    public function calendar()
+    {
+        return view('calendar');
+    }
 }

@@ -49,4 +49,7 @@ Route::get('/security', ['as' => 'admin-security', 'uses' => 'Admin\Security\Sec
 Route::get('/settings', ['as' => 'admin-settings', 'uses' => 'Admin\Settings\SettingsController@index']);
 Route::put('/settings', ['as' => 'admin-settings', 'uses' => 'Admin\Settings\SettingsController@store']);
 
+//not indexed routes
+Route::get('/calendar', ['as' => 'calendar', 'uses' => 'WelcomeController@calendar']);
+
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
